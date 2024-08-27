@@ -1,31 +1,37 @@
-# The URL the site will be built for
+title = "Maxime Letemple"
+
 base_url = "https://maxletemple.github.io"
 theme = "duckquill"
-# Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
-
-# Whether to build a search index to be used later on by a JavaScript library
+generate_feeds = true
 build_search_index = true
 
+default_language = "en"
+
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
 
 [extra]
-# Put all your custom variables here
-primary_color = "#3584e4"
-primary_color_alpha = "rgb(53 132 228 / 0.2)"
+default_theme = "light"
+primary_color = "#386C01"
+primary_color_alpha = "rgb(204 0 0 / 0.2)"
+katex = true
 
 [extra.nav]
-# Display Atom/RSS feed button in the nav
 show_feed = true
-# Links used in the nav
+show_repo = true
 links = [
   # {url = "https://codeberg.org/daudix/duckquill", name = "Repo"},
   #  {url = "$BASE_URL/demo", name = "Demo"},
-  { url = "$BASE_URL/blog", name = "Blog" },
-  { url = "https://github.com/AgustinRamiroDiaz", name = "GitHub" },
-  { url = "https://www.linkedin.com/in/agust%C3%ADn-ramiro-d%C3%ADaz-bb0387184/", name = "LinkedIn" },
-  { url = "mailto:agustin.ramiro.diaz@gmail.com", name = "Contact" },
+  { name = "Links", sublinks = [
+    { url = "/blog", name = "Blog" },
+    { url = "https://github.com/maxletemple", name = "GitHub" },
+    { url = "https://www.linkedin.com/in/maxime-letemple-186006162/", name = "LinkedIn" },
+    # { url = "mailto:maxime.letemple@bordeaux-inp.fr", name = "Mail" },
+  ]},
+  { url = "/CV.pdf", name = "CV" },
 ]
+
+[extra.footer]
+show_copyright = true
+show_powered_by = true
