@@ -2,12 +2,17 @@
 authors = ["Maxime Letemple"]
 title = "Phase-locked Loops"
 date = 2023-03-19
+[taxonomies]
+tags = ["analogue electronics"]
 +++
 
 A PLL is an electronic circuit that can be used to generate an output signal that is synchronized in frequency and phase with an input signal.
 The main function of a PLL is to track and synchronize the frequency and phase of a reference signal with an output signal.
 
-![Phase Locked Loop](/assets/images/pll.svg "Analog phase locked loop"){: width = 250px}
+<figure>
+{{ image(url="pll.svg", alt="Analog phase locked loop" no_hover=true transparent=true) }}
+<figcaption>Analog phase locked loop</figcaption>
+</figure>
 
 Phase Detector
 ==============

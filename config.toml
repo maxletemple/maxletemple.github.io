@@ -7,14 +7,18 @@ generate_feeds = true
 build_search_index = true
 
 default_language = "en"
+taxonomies = [{ name = "tags", feed = true }]
 
 [markdown]
 highlight_code = true
 
+[search]
+index_format = "elasticlunr_json"
+
 [extra]
 default_theme = "light"
 primary_color = "#386C01"
-primary_color_alpha = "rgb(204 0 0 / 0.2)"
+primary_color_alpha = "rgb(56 108 1 / 0.2)"
 katex = true
 
 [extra.nav]
