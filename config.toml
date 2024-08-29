@@ -5,8 +5,9 @@ theme = "duckquill"
 compile_sass = true
 generate_feeds = true
 build_search_index = true
+minify_html = true
 
-default_language = "en"
+default_language = "fr"
 taxonomies = [{ name = "tags", feed = true }]
 
 [markdown]
@@ -15,11 +16,18 @@ highlight_code = true
 [search]
 index_format = "elasticlunr_json"
 
+[languages.en]
+title = "Maxime Letemple"
+generate_feeds = true
+
+taxonomies = [{ name = "tags", feed = true }]
+
 [extra]
 default_theme = "light"
 primary_color = "#386C01"
 primary_color_alpha = "rgb(56 108 1 / 0.2)"
 katex = true
+show_copy_button = true
 
 [extra.nav]
 show_feed = true
@@ -35,6 +43,7 @@ links = [
   ]},
   { url = "/CV.pdf", name = "CV" },
 ]
+show_theme_switcher = true
 
 [extra.footer]
 show_copyright = true

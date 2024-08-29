@@ -8,3 +8,5 @@ I am a 21 years old engineering student at Bordeaux's [ENSEIRB-MATMECA](https://
 
 I intend to use this website as a portfolio. I will publish articles about what I study in practical work on the blog section. This should help my understanding of the subjects.
 
+Resume
+==
