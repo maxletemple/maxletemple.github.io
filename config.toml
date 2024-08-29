@@ -7,7 +7,7 @@ generate_feeds = true
 build_search_index = true
 minify_html = true
 
-default_language = "fr"
+default_language = "en"
 taxonomies = [{ name = "tags", feed = true }]
 
 [markdown]
@@ -16,7 +16,7 @@ highlight_code = true
 [search]
 index_format = "elasticlunr_json"
 
-[languages.en]
+[languages.fr]
 title = "Maxime Letemple"
 generate_feeds = true
 
@@ -24,8 +24,8 @@ taxonomies = [{ name = "tags", feed = true }]
 
 [extra]
 default_theme = "light"
-primary_color = "#386C01"
-primary_color_alpha = "rgb(56 108 1 / 0.2)"
+primary_color = "#26A269"
+primary_color_alpha = "rgb(38 162 105 / 0.2)"
 katex = true
 show_copy_button = true
 
