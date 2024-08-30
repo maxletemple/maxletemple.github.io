@@ -41,7 +41,7 @@ links = [
     { url = "https://www.linkedin.com/in/maxime-letemple-186006162/", name = "LinkedIn" },
     # { url = "mailto:maxime.letemple@bordeaux-inp.fr", name = "Mail" },
   ]},
-  { url = "/CV.pdf", name = "CV" },
+  { url = "CV.pdf", name = "CV" },
 ]
 show_theme_switcher = true
 

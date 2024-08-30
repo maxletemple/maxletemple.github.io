@@ -13,4 +13,7 @@ Ce site web me sert à la fois de portfolio et de blog. J'y publie des articles 
 Expériences professionnelles
 ==
 
+### Juin 2023 - Août 2023:
 
+Stage de deuxième année effectué à l'université de Liège. J'y ai porté un ensemble d’outils de mesures réseau (Scamper) sur un unikernel (Unikraft). La quantité
+de mémoire utilisée a été divisée par 1000 et ce stage a abouti à un papier scientifique. Plus d'informations sur l'[article de blog](blog/PLL/index.md)
