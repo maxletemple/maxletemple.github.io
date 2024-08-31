@@ -21,16 +21,20 @@ Cette page est disponible en [français](/fr).
 {% end %}
 
 
-About me
+About Me
 ===
 
-![me](https://media.licdn.com/dms/image/v2/C4D03AQFygv1no9vyBQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1647881504368?e=1730332800&v=beta&t=F2FjNnNSfCbUZ1ktMs1kHILFWluEX8rnZOvilDLCRE4#end#no-hover)
-I am a 21 years old engineering student at Bordeaux's [ENSEIRB-MATMECA](https://www.bordeaux-inp.fr/en). I study analogue and digital electronics, signal processing and automation. My best liked subjects are FPGA programming and microelectronics. I am currently doing an internship with the CNRS at the University of Lille. The main goal of this internship is to create a RISC V instruction set in order to study memory contention on multicore SoCs.
+![me](profile.png#end#no-hover)
+I am an engineering student at ENSEIRB-MATMECA, located in Bordeaux. My studies focus on analog and digital electronics, signal processing, and automation. My favorite subjects include embedded systems, reprogrammable circuits (FPGAs), and microelectronics. I will be graduating in the coming weeks and am currently seeking my first job opportunity.
 
+This website serves as both my portfolio and blog. I publish articles here about the projects I've worked on, whether related to my school or not. Writing helps me understand complex topics and solidifies my skills.
+Professional Experience
 
-I intend to use this website as a portfolio. I will publish articles about what I study in practical work on the blog section. This should help my understanding of the subjects.
+### February 2024 - August 2024:
 
-Resume
-==
+**Final-year internship at CNRS in Lille**. My work involved modifying a multicore RISC-V processor to add an instruction set for analyzing multithreaded programs, then studying its impact on an operating system. More information can be found in the blog post.
 
+### June 2023 - August 2023:
+
+**Second-year internship at the University of Liège**. I ported a set of network measurement tools (Scamper) to a unikernel (Unikraft). The memory usage was reduced by a factor of 1000, and this internship led to a scientific paper. More information can be found in the blog post.
 
