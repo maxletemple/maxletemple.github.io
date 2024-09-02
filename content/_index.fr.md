@@ -26,9 +26,9 @@ Expériences professionnelles
 ==
 
 ### Février 2024 - Août 2024:
-**Stage de fin d'études effectué au CNRS à Lille**. Mon travail a été de modifier un processeur RISC-V multicœur pour y ajouter un jeu d'instructions permettant l'analyse de programmes multithreadés, puis d'étudier son impact sur un système d'exploitation. Plus d'informations sur l'[article de blog](blog/stage3A/index.md).
+**Stage de fin d'études effectué au CNRS à Lille**. Mon travail a été de modifier un processeur RISC-V multicœur pour y ajouter un jeu d'instructions permettant l'analyse de programmes multithreadés, puis d'étudier son impact sur un système d'exploitation. Plus d'informations sur l'[article de blog](blog/stage3a/).
 
 ### Juin 2023 - Août 2023:
 
 **Stage de deuxième année effectué à l'université de Liège**. J'y ai porté un ensemble d’outils de mesures réseau (Scamper) sur un unikernel (Unikraft). La quantité
-de mémoire utilisée a été divisée par 1000 et ce stage a abouti à un papier scientifique. Plus d'informations sur l'[article de blog](blog/stage2A/index.md)
+de mémoire utilisée a été divisée par 1000 et ce stage a abouti à un papier scientifique. Plus d'informations sur l'[article de blog](blog/stage2a/)
