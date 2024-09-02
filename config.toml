@@ -35,13 +35,13 @@ show_repo = true
 links = [
   # {url = "https://codeberg.org/daudix/duckquill", name = "Repo"},
   #  {url = "$BASE_URL/demo", name = "Demo"},
-  { name = "Links", sublinks = [
-    { url = "/blog", name = "Blog" },
+  { url = "/blog", name = "Blog" },
+  { url = "CV.pdf", name = "CV" },
+  { name = "Contact", sublinks = [
     { url = "https://github.com/maxletemple", name = "GitHub" },
     { url = "https://www.linkedin.com/in/maxime-letemple-186006162/", name = "LinkedIn" },
     # { url = "mailto:maxime.letemple@bordeaux-inp.fr", name = "Mail" },
   ]},
-  { url = "CV.pdf", name = "CV" },
 ]
 show_theme_switcher = true
 
