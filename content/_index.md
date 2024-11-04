@@ -27,7 +27,7 @@ About Me
 ![me](profile.png#end#no-hover)
 I am an engineering student at ENSEIRB-MATMECA, located in Bordeaux. My studies focus on analog and digital electronics, signal processing, and automation. My favorite subjects include embedded systems, reprogrammable circuits (FPGAs), and microelectronics. I will be graduating in the coming weeks and am currently seeking my first job opportunity.
 
-This website serves as both my portfolio and blog. I publish articles here about the projects I've worked on, whether related to my school or not. Writing helps me understand complex topics and solidifies my skills.
+This website serves as both my [portfolio](@/blog/_index.md) and [blog](@/blog/_index.md). I publish articles here about the projects I've worked on, whether related to my school or not. Writing helps me understand complex topics and solidifies my skills.
 Professional Experience
 
 ### February 2024 - August 2024:

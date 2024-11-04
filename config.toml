@@ -32,10 +32,11 @@ show_copy_button = true
 [extra.nav]
 show_feed = true
 show_repo = true
+auto_hide = true
 links = [
   # {url = "https://codeberg.org/daudix/duckquill", name = "Repo"},
   #  {url = "$BASE_URL/demo", name = "Demo"},
-  { url = "/blog", name = "Blog" },
+  { url = "@/blog/_index.md", name = "Blog" },
   { url = "CV.pdf", name = "CV" },
   { name = "Contact", menu = [
     { url = "https://github.com/maxletemple", name = "GitHub" },
