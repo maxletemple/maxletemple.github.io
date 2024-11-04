@@ -24,8 +24,8 @@ taxonomies = [{ name = "tags", feed = true }]
 
 [extra]
 default_theme = "light"
-primary_color = "#26A269"
-primary_color_alpha = "rgb(38 162 105 / 0.2)"
+accent_color = "#26A269"
+accent_color_alpha = "rgb(38 162 105 / 0.2)"
 katex = true
 show_copy_button = true
 
@@ -37,7 +37,7 @@ links = [
   #  {url = "$BASE_URL/demo", name = "Demo"},
   { url = "/blog", name = "Blog" },
   { url = "CV.pdf", name = "CV" },
-  { name = "Contact", sublinks = [
+  { name = "Contact", menu = [
     { url = "https://github.com/maxletemple", name = "GitHub" },
     { url = "https://www.linkedin.com/in/maxime-letemple-186006162/", name = "LinkedIn" },
     # { url = "mailto:maxime.letemple@bordeaux-inp.fr", name = "Mail" },
