@@ -1,55 +1,55 @@
 +++
 authors = ["Maxime Letemple"]
-title = "Phase-locked Loops"
+title = "Boucles à verrouillage de phase"
 date = 2023-03-19
 [taxonomies]
-tags = ["analogue electronics"]
+tags = ["électronique analogique"]
 +++
 
-A PLL is an electronic circuit that can be used to generate an output signal that is synchronized in frequency and phase with an input signal.
-The main function of a PLL is to track and synchronize the frequency and phase of a reference signal with an output signal.
+Une boucle à verrouillage de phase (PLL) est un circuit électronique qui peut être utilisé pour générer un signal de sortie synchronisé en fréquence et en phase avec un signal d'entrée.
+La fonction principale d'une PLL est de suivre et de synchroniser la fréquence et la phase d'un signal de référence avec un signal de sortie.
 
 <figure>
-{{ image(url="pll.svg", alt="Analog phase locked loop" no_hover=true transparent=true) }}
-<figcaption>Analog phase locked loop</figcaption>
+{{ image(url="pll.svg", alt="Boucle à verrouillage de phase analogique" no_hover=true transparent=true) }}
+<figcaption>Boucle à verrouillage de phase analogique</figcaption>
 </figure>
 
-Phase Detector
-==============
+Détecteur de phase
+==================
 
-The phase detector receives in input two signals $v1(t)$ and $v2(t)$ and returns a signal $v(t)=K_d.f(\Phi_{ref}-\Phi_{osc})$.
+Le détecteur de phase reçoit en entrée deux signaux $v1(t)$ et $v2(t)$ et renvoie un signal $v(t)=K_d.f(\Phi_{ref}-\Phi_{osc})$.
 
-Usual phase detectors are the Balanced Mixer(for sinusoid signals) or XOR comparator(for digital signals).
+Les détecteurs de phase usuels sont le mélangeur équilibré (pour les signaux sinusoïdaux) ou le comparateur XOR (pour les signaux numériques).
 
-Low-pass filter
-===============
+Filtre passe-bas
+================
 
-The main objective of the low-pass filter is to generate the voltage used for the VCO.
-Usually, the transfer function is $F(p)=\frac{1}{1+\tau P}$ with $\tau = RC$ for a RC filter.
+L'objectif principal du filtre passe-bas est de générer la tension utilisée pour le VCO.
+Habituellement, la fonction de transfert est $F(p)=\frac{1}{1+\tau P}$ avec $\tau = RC$ pour un filtre RC.
 
 VCO
 ===
 
-The VCO aims to generate the output signal. The output signal is linear around its working pulsation.
-Indeed, $\omega_{VCO} = \omega_{1} + K_0(U_{VCO} - U_1)$, with $K_0$ the gain of the VCO.
+Le VCO vise à générer le signal de sortie. Le signal de sortie est linéaire autour de sa pulsation de travail.
+En effet, $\omega_{VCO} = \omega_{1} + K_0(U_{VCO} - U_1)$, avec $K_0$ le gain du VCO.
 
 ***
 
-Extension for frequency synthesizers
-====================================
+Extension pour les synthétiseurs de fréquence
+=============================================
 
-In order to synthesize higher frequencies, a frequency divider can be added on the feedback branch. By this way,
-$f_{VCO}=N.f_{ref}$. $f_{ref}$ is the reference signal, is is called step of synthesis. Indeed, for $N = N+1$.
+Afin de synthétiser des fréquences plus élevées, un diviseur de fréquence peut être ajouté sur la branche de rétroaction. De cette manière,
+$f_{VCO}=N.f_{ref}$. $f_{ref}$ est le signal de référence, il est appelé pas de synthèse. En effet, pour $N = N+1$.
 $f_{VCO}=N.f_{ref} + f_{ref}$
 
 ***
 
-Reminder
-====
+Rappel
+======
 
-Useful functions and values:
+Fonctions et valeurs utiles :
 
-Transfert function of a linearized PLL without divider:
+Fonction de transfert d'une PLL linéarisée sans diviseur :
 
 $$H(p)=\frac{K_d K_0 F(p)}{p + K_d K_0 F(p)} = \frac{\omega _n ²}{\omega _n ² + 2\xi \omega _n p + p²}$$
 

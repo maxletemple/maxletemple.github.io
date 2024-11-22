@@ -7,7 +7,7 @@ generate_feeds = true
 build_search_index = true
 minify_html = true
 
-default_language = "en"
+default_language = "fr"
 taxonomies = [{ name = "tags", feed = true }]
 
 [markdown]
@@ -16,7 +16,7 @@ highlight_code = true
 [search]
 index_format = "elasticlunr_json"
 
-[languages.fr]
+[languages.en]
 title = "Maxime Letemple"
 generate_feeds = true
 

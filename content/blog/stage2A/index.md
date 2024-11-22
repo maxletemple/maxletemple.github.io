@@ -1,29 +1,29 @@
 +++
 authors = ["Maxime Letemple"]
-title = "Porting a network measurement infrastructure on an unikernel"
+title = "Portage d'une infrastructure de mesure de réseau sur un unikernel"
 date = 2023-09-10
-description = "Second year internship at University of Liège"
+description = "Stage de deuxième année à l'Université de Liège"
 [taxonomies]
-tags = ["internships"]
+tags = ["stages"]
 +++
 
-The main objective of this internship was the porting of a network measurement infrastructure on an unikernel, named [Scamper](https://www.caida.org/catalog/software/scamper/). A unikernel is a specialized, lightweight, single-purpose virtual machine that combines an application and the minimal set of operating system (OS) components required to run it. Unlike traditional operating systems, which are designed to support multiple applications and users, a unikernel is designed to run a single application, including only the necessary parts of the OS as part of its build. The unikernel used here is [Unikraft](https://unikraft.org/).
+L'objectif principal de ce stage était le portage d'une infrastructure de mesure de réseau sur un unikernel, nommé [Scamper](https://www.caida.org/catalog/software/scamper/). Un unikernel est une machine virtuelle spécialisée, légère et à usage unique qui combine une application et le minimum de composants du système d'exploitation (OS) nécessaires pour l'exécuter. Contrairement aux systèmes d'exploitation traditionnels, conçus pour prendre en charge plusieurs applications et utilisateurs, un unikernel est conçu pour exécuter une seule application, incluant uniquement les parties nécessaires de l'OS dans sa construction. L'unikernel utilisé ici est [Unikraft](https://unikraft.org/).
 
 <figure>
-{{ image(url="unikernel_vs_vm.png", alt="Comparizon between unikernels and VMs") }}
-<figcaption>Comparizon between unikernels and VMs</figcaption>
+{{ image(url="unikernel_vs_vm.png", alt="Comparaison entre unikernels et VMs") }}
+<figcaption>Comparaison entre unikernels et VMs</figcaption>
 </figure>
 
-Results
+Résultats
 ===
 
-Compared to traditional solutions like virtual machines and Docker containers, uTNT demonstrated significantly better performance. This internship showcased the potential of unikernels as a platform for high-performance and lightweight network measurement applications.
+Comparé aux solutions traditionnelles comme les machines virtuelles et les conteneurs Docker, uTNT a démontré des performances nettement meilleures. Ce stage a mis en évidence le potentiel des unikernels en tant que plateforme pour des applications de mesure de réseau haute performance et légères.
 <figure>
-{{ image(url="ram_unikernel.png", alt="RAM usage of my work compared to Debian on a VM") }}
-<figcaption>RAM usage of my work compared to Debian on a VM</figcaption>
+{{ image(url="ram_unikernel.png", alt="Utilisation de la RAM de mon travail comparée à Debian sur une VM") }}
+<figcaption>Utilisation de la RAM de mon travail comparée à Debian sur une VM</figcaption>
 </figure>
 
-More infos
+Plus d'infos
 ===
 
-You can find the repo [here](https://github.com/maxletemple/uTNT), and my report [here](rapport.pdf)(in french).
+Vous pouvez trouver le dépôt [ici](https://github.com/maxletemple/uTNT), et mon rapport [ici](rapport.pdf).

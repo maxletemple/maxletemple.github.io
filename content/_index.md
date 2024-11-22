@@ -1,7 +1,6 @@
 +++
- title = "Home"
+ title = "Acceuil"
 +++
-
 {% crt() %}
 ```
                                                \ _ /
@@ -15,26 +14,21 @@ jgs^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^""""""""""~~~~~~~~~~~~~~~~~~
 ```
 {% end %}
 
-
-{% alert(note=true) %}
-Cette page est disponible en [français](/fr).
-{% end %}
-
-
-About Me
+À propos
 ===
 
 ![me](profile.png#end#no-hover)
-I am an engineering student at ENSEIRB-MATMECA, located in Bordeaux. My studies focus on analog and digital electronics, signal processing, and automation. My favorite subjects include embedded systems, reprogrammable circuits (FPGAs), and microelectronics. I will be graduating in the coming weeks and am currently seeking my first job opportunity.
+Je suis étudiant en école d'ingénieur à l'[ENSEIRB-MATMECA](https://www.bordeaux-inp.fr), à Bordeaux. J'y étudie l'électronique analogique et numérique, le traitement du signal et l'automatique. Mes sujets favoris sont les systèmes embarqués, les circuits reprogrammables (FPGA) et la microélectronique. Je serai diplômé dans les semaines à venir, et je suis à la recherche de mon premier emploi.
 
-This website serves as both my [portfolio](@/blog/_index.md) and [blog](@/blog/_index.md). I publish articles here about the projects I've worked on, whether related to my school or not. Writing helps me understand complex topics and solidifies my skills.
-Professional Experience
+Ce site web me sert à la fois de portfolio et de blog. J'y publie des articles sur les projets que j'ai pu effectuer, qu'ils soient liés à mon école ou non. Le fait d'écrire m'aide à comprendre, et me permet de consolider mes compétences. 
 
-### February 2024 - August 2024:
+Expériences professionnelles
+==
 
-**Final-year internship at CNRS in Lille**. My work involved modifying a multicore RISC-V processor to add an instruction set for analyzing multithreaded programs, then studying its impact on an operating system. More information can be found in the blog post.
+### Février 2024 - Août 2024:
+**Stage de fin d'études effectué au CNRS à Lille**. Mon travail a été de modifier un processeur RISC-V multicœur pour y ajouter un jeu d'instructions permettant l'analyse de programmes multithreadés, puis d'étudier son impact sur un système d'exploitation. Plus d'informations sur l'[article de blog](blog/stage3a/).
 
-### June 2023 - August 2023:
+### Juin 2023 - Août 2023:
 
-**Second-year internship at the University of Liège**. I ported a set of network measurement tools (Scamper) to a unikernel (Unikraft). The memory usage was reduced by a factor of 1000, and this internship led to a scientific paper. More information can be found in the blog post.
-
+**Stage de deuxième année effectué à l'université de Liège**. J'y ai porté un ensemble d’outils de mesures réseau (Scamper) sur un unikernel (Unikraft). La quantité
+de mémoire utilisée a été divisée par 1000 et ce stage a abouti à un papier scientifique. Plus d'informations sur l'[article de blog](blog/stage2a/)

@@ -1,30 +1,29 @@
 +++
 authors = ["Maxime Letemple"]
-title = "Polaroid film"
+title = "Film Polaroid"
 date = 2024-11-03
-description = "Polaroid style poster generator "
+description = "Générateur d'affiches style Polaroid"
 [taxonomies]
-tags = ["Python"]
+tags = ["python"]
 +++
-Polaroid film is a python tool used to store a database of movies. The following items can be stored:
+Polaroid Film est un outil python utilisé pour stocker une base de données de films. Les éléments suivants peuvent être stockés :
 
-* Title
-* Year of production
-* Director
-* Format (Film, series of animated film)
-* Actors
-* Personal rating
-* Duration
+* Titre
+* Année de production
+* Réalisateur
+* Format (Film, série ou film d'animation)
+* Acteurs
+* Note personnelle
+* Durée
 
-A document can be generated with Polaroid style poster. The document can be customized and uses the Pillow library.
+Un document peut être généré avec une affiche style Polaroid. Le document peut être personnalisé et utilise la bibliothèque Pillow.
 
-## Example
-The default output is an 8.5 cm * 12.0 cm Polaroid, arranged in a PDF document with 4 Polaroids per page.
+## Exemple
+La sortie par défaut est un Polaroid de 8,5 cm * 12,0 cm, arrangé dans un document PDF avec 4 Polaroids par page.
 
-{{ image(url="example_output.png", alt="Example output", no_hover=true) }}
+{{ image(url="example_output.png", alt="Exemple de sortie", no_hover=true) }}
 
-
-More infos
+Plus d'infos
 ===
 
-The code can be found on the [github repository](https://github.com/maxletemple/polaroid_film).
+Le code peut être trouvé sur le [dépôt github](https://github.com/maxletemple/polaroid_film).

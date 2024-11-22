@@ -2,13 +2,12 @@
 authors = ["Maxime Letemple"]
 title = "RISCV-EIRB"
 date = 2023-05-23
-description = "RV32I RISCV processor from scratch"
+description = "Processeur RISCV RV32I à partir de zéro"
 [taxonomies]
-tags = ["digital electronics", "school projects"]
+tags = ["électronique numérique", "projets scolaires"]
 +++
-My biggest project during my S8 was the implementation of a RV32I RISCV processor on a Nexys A7 FPGA board. I was in a team of six students, and my job was to create test binaries in order to validate each instruction. When the processor was done, I had to set the gcc toolchain to work on our processor.
+Mon plus grand projet durant mon S8 a été la mise en œuvre d'un processeur RISCV RV32I sur une carte FPGA Nexys A7. J'étais dans une équipe de six étudiants, et mon travail consistait à créer des binaires de test afin de valider chaque instruction. Une fois le processeur terminé, j'ai dû configurer la toolchain gcc pour fonctionner sur notre processeur.
 
-More infos
-===
+## Plus d'infos
 
-The code can be found on the [github repository](https://github.com/maxletemple/riscv_eirb).
+Le code peut être trouvé sur le [dépôt github](https://github.com/maxletemple/riscv_eirb).
