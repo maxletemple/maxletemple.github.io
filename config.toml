@@ -36,10 +36,10 @@ links = [
   # {url = "https://codeberg.org/daudix/duckquill", name = "Repo"},
   #  {url = "$BASE_URL/demo", name = "Demo"},
   { url = "@/blog/_index.md", name = "Blog" },
-  { url = "CV.pdf", name = "CV" },
   { name = "Contact", menu = [
     { url = "https://github.com/maxletemple", name = "GitHub" },
     { url = "https://www.linkedin.com/in/maxime-letemple-186006162/", name = "LinkedIn" },
+    { url = "CV.pdf", name = "CV" },
     # { url = "mailto:maxime.letemple@bordeaux-inp.fr", name = "Mail" },
   ]},
 ]
