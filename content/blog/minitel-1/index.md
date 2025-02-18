@@ -20,7 +20,7 @@ L'objectif de ce projet est de remettre au goût du jour le Minitel en utilisant
 
 Le Minitel est composé de deux cartes:
 * La carte vidéo, qui se charge également de l'alimentation
-* la carte mère, qui communique avec le réseau Télétel et envoie le signal vidéo à l'autre carte
+* La carte mère, qui communique avec le réseau Télétel et envoie le signal vidéo à l'autre carte
 
 <figure>
 {{ image(url="minitel2.jpeg", no_hover=true) }}

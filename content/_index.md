@@ -20,7 +20,7 @@ jgs^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^""""""""""~~~~~~~~~~~~~~~~~~
 ![me](profile.png#end#no-hover)
 Je suis un ingénieur diplômé de l'[ENSEIRB-MATMECA](https://www.bordeaux-inp.fr), à Bordeaux. J'y ai étudié l'électronique analogique et numérique, le traitement du signal et l'automatique. Mes sujets favoris sont les systèmes embarqués, les circuits reprogrammables (FPGA) et la microélectronique. Je suis actuellement ingénieur FPGA chez Trinnov audio.
 
-Ce site web me sert à la fois de portfolio et de blog. J'y publie des articles sur les projets que j'ai pu effectuer, qu'ils soient liés à mon école ou non.
+Ce site web me sert à la fois de portfolio et de [blog](blog/). J'y publie des articles sur les projets que j'ai pu effectuer, qu'ils soient liés à mon école ou non.
 
 Expériences professionnelles
 ==
