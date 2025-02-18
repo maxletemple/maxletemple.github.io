@@ -18,15 +18,15 @@ jgs^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^""""""""""~~~~~~~~~~~~~~~~~~
 ===
 
 ![me](profile.png#end#no-hover)
-Je suis un ingénieur diplômé l'[ENSEIRB-MATMECA](https://www.bordeaux-inp.fr), à Bordeaux. J'y ai étudié l'électronique analogique et numérique, le traitement du signal et l'automatique. Mes sujets favoris sont les systèmes embarqués, les circuits reprogrammables (FPGA) et la microélectronique. Je suis actuellement ingénieur FPGA chez Trinnov audio.
+Je suis un ingénieur diplômé de l'[ENSEIRB-MATMECA](https://www.bordeaux-inp.fr), à Bordeaux. J'y ai étudié l'électronique analogique et numérique, le traitement du signal et l'automatique. Mes sujets favoris sont les systèmes embarqués, les circuits reprogrammables (FPGA) et la microélectronique. Je suis actuellement ingénieur FPGA chez Trinnov audio.
 
-Ce site web me sert à la fois de portfolio et de blog. J'y publie des articles sur les projets que j'ai pu effectuer, qu'ils soient liés à mon école ou non. Le fait d'écrire m'aide à comprendre, et me permet de consolider mes compétences. 
+Ce site web me sert à la fois de portfolio et de blog. J'y publie des articles sur les projets que j'ai pu effectuer, qu'ils soient liés à mon école ou non.
 
 Expériences professionnelles
 ==
 
 ### Janvier 2024 - Aujourd'hui
-**Ingénieur en FPGA chez Trinnov Audio**. Trinnov Audio est une entreprise fabriquant des processeurs audio. Je fais partie de l'équipe travaillant sur les cartes de ceux-ci.
+**Ingénieur en FPGA chez Trinnov Audio**. [Trinnov Audio](https://www.trinnov.com/) est une entreprise fabriquant des processeurs audio. Je fais partie de l'équipe travaillant sur les cartes de ceux-ci.
 
 ### Février 2024 - Août 2024:
 **Stage de fin d'études effectué au CNRS à Lille**. Mon travail a été de modifier un processeur RISC-V multicœur pour y ajouter un jeu d'instructions permettant l'analyse de programmes multithreadés, puis d'étudier son impact sur un système d'exploitation. Plus d'informations sur l'[article de blog](blog/stage3a/).
