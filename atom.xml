@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
+    <title>Maxime Letemple</title>
+    <link rel="self" type="application/atom+xml" href="https://mletemple.fr/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://mletemple.fr"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-02-23T00:00:00+00:00</updated>
+    <id>https://mletemple.fr/atom.xml</id>
+    <entry xml:lang="fr">
+        <title>Minitel #2</title>
+        <published>2025-02-23T00:00:00+00:00</published>
+        <updated>2025-02-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/blog/minitel-2/"/>
+        <id>https://mletemple.fr/blog/minitel-2/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/blog/minitel-2/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h1&gt;
+&lt;p&gt;La première étape pour la mise en fonctionnement de la carte est le choix du système d&#x27;exploitation. Le but de la Raspberry Pi est d&#x27;exécuter Home Assistant, ainsi que le serveur X avec le gestionnaire de fenêtre.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="fr">
+        <title>Minitel #1</title>
+        <published>2025-02-18T00:00:00+00:00</published>
+        <updated>2025-02-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/blog/minitel-1/"/>
+        <id>https://mletemple.fr/blog/minitel-1/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/blog/minitel-1/">&lt;h1 id=&quot;presentation&quot;&gt;Présentation&lt;&#x2F;h1&gt;
+&lt;p&gt;Le Minitel est un terminal informatique développé en France dans les années 1980, permettant l&#x27;accès à divers services en ligne avant l&#x27;avènement d&#x27;Internet. Il est devenu un objet mythique de son époque, s&#x27;invitant dans beaucoup de foyers français et leur donnant accès à un nombre important de services indispensables, comme le Minitel rose. Le réseau Télétel a été fermé en 2012, rendant quasiment inutilisables les Minitels. On peut donc en trouver pour quelques euros dans les brocantes.&lt;&#x2F;p&gt;
+&lt;p&gt;L&#x27;objectif de ce projet est de remettre au goût du jour le Minitel en utilisant l&#x27;écran cathodique de celui-ci avec la sortie composite d&#x27;une Raspberry Pi 5. On installera &lt;a href=&quot;https:&#x2F;&#x2F;www.home-assistant.io&#x2F;&quot;&gt;Home Assistant&lt;&#x2F;a&gt;, qui est à la fois un système d&#x27;exploitation et un serveur central très utilisé dans le monde de la domotique.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;premiers-pas-avec-le-minitel&quot;&gt;Premiers pas avec le Minitel&lt;&#x2F;h1&gt;
+&lt;p&gt;Le Minitel est composé de deux cartes:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;La carte vidéo, qui se charge également de l&#x27;alimentation&lt;&#x2F;li&gt;
+&lt;li&gt;La carte mère, qui communique avec le réseau Télétel et envoie le signal vidéo à l&#x27;autre carte&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;figure&gt;
+&lt;img class=&quot;no-hover&quot;src=&quot;minitel2.jpeg&quot;&#x2F;&gt;
+&lt;figcaption&gt;Minitel avec le capot ouvert, on distingue les deux cartes.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Seule la carte vidéo sera utile ici. La carte mère sera donc enlevée et remplacée par une Raspberry Pi 5 et une carte convertissant le signal composite en un signal spécifique à l&#x27;écran cathodique. Pour l&#x27;affichage, deux signaux sont envoyés à la carte vidéo: un signal de synchronisation et un signal de donnée. Je rentrerai dans les détails dans un post dédié, mais le signal composite devra être décomposé et modifié, d&#x27;où la nécessité d&#x27;une carte de conversion vidéo.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;avancement&quot;&gt;Avancement:&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Utilisation de l&#x27;écran cathodique du Minitel
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Validation de la sortie composite de la Raspberry Pi&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Conversion du signal composite en un signal compréhensible par le Minitel&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Installation du système d&#x27;exploitation sur la Rasberry Pi
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Installation de Home Assistant&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Installation d&#x27;un gestionnaire de fenêtres et mise en place de la routine de démarrage&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Développement des applications
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Ajout d&#x27;un agent intelligent basé sur un LLM, capable d&#x27;intéragir avec les fonctions domotiques de Home Assistant&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Création d&#x27;une interface pour l&#x27;affichage&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="fr">
+        <title>Film Polaroid</title>
+        <published>2024-11-03T00:00:00+00:00</published>
+        <updated>2024-11-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/blog/polaroid-film/"/>
+        <id>https://mletemple.fr/blog/polaroid-film/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/blog/polaroid-film/">&lt;p&gt;Polaroid Film est un outil python utilisé pour stocker une base de données de films. Les éléments suivants peuvent être stockés :&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Titre&lt;&#x2F;li&gt;
+&lt;li&gt;Année de production&lt;&#x2F;li&gt;
+&lt;li&gt;Réalisateur&lt;&#x2F;li&gt;
+&lt;li&gt;Format (Film, série ou film d&#x27;animation)&lt;&#x2F;li&gt;
+&lt;li&gt;Acteurs&lt;&#x2F;li&gt;
+&lt;li&gt;Note personnelle&lt;&#x2F;li&gt;
+&lt;li&gt;Durée&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Un document peut être généré avec une affiche style Polaroid. Le document peut être personnalisé et utilise la bibliothèque Pillow.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;exemple&quot;&gt;Exemple&lt;&#x2F;h2&gt;
+&lt;p&gt;La sortie par défaut est un Polaroid de 8,5 cm * 12,0 cm, arrangé dans un document PDF avec 4 Polaroids par page.&lt;&#x2F;p&gt;
+&lt;img class=&quot;no-hover&quot;alt=&quot;Exemple de sortie&quot;src=&quot;example_output.png&quot;&#x2F;&gt;&lt;h1 id=&quot;plus-d-infos&quot;&gt;Plus d&#x27;infos&lt;&#x2F;h1&gt;
+&lt;p&gt;Le code peut être trouvé sur le &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;maxletemple&#x2F;polaroid_film&quot;&gt;dépôt github&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="fr">
+        <title>Portage d&#x27;une infrastructure de mesure de réseau sur un unikernel</title>
+        <published>2023-09-10T00:00:00+00:00</published>
+        <updated>2023-09-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/blog/stage2a/"/>
+        <id>https://mletemple.fr/blog/stage2a/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/blog/stage2a/">&lt;p&gt;L&#x27;objectif principal de ce stage était le portage d&#x27;une infrastructure de mesure de réseau sur un unikernel, nommé &lt;a href=&quot;https:&#x2F;&#x2F;www.caida.org&#x2F;catalog&#x2F;software&#x2F;scamper&#x2F;&quot;&gt;Scamper&lt;&#x2F;a&gt;. Un unikernel est une machine virtuelle spécialisée, légère et à usage unique qui combine une application et le minimum de composants du système d&#x27;exploitation (OS) nécessaires pour l&#x27;exécuter. Contrairement aux systèmes d&#x27;exploitation traditionnels, conçus pour prendre en charge plusieurs applications et utilisateurs, un unikernel est conçu pour exécuter une seule application, incluant uniquement les parties nécessaires de l&#x27;OS dans sa construction. L&#x27;unikernel utilisé ici est &lt;a href=&quot;https:&#x2F;&#x2F;unikraft.org&#x2F;&quot;&gt;Unikraft&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+&lt;img class=&quot;&quot;alt=&quot;Comparaison entre unikernels et VMs&quot;src=&quot;unikernel_vs_vm.png&quot;&#x2F;&gt;
+&lt;figcaption&gt;Comparaison entre unikernels et VMs&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h1 id=&quot;resultats&quot;&gt;Résultats&lt;&#x2F;h1&gt;
+&lt;p&gt;Comparé aux solutions traditionnelles comme les machines virtuelles et les conteneurs Docker, uTNT a démontré des performances nettement meilleures. Ce stage a mis en évidence le potentiel des unikernels en tant que plateforme pour des applications de mesure de réseau haute performance et légères.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+&lt;img class=&quot;&quot;alt=&quot;Utilisation de la RAM de mon travail comparée à Debian sur une VM&quot;src=&quot;ram_unikernel.png&quot;&#x2F;&gt;
+&lt;figcaption&gt;Utilisation de la RAM de mon travail comparée à Debian sur une VM&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h1 id=&quot;plus-d-infos&quot;&gt;Plus d&#x27;infos&lt;&#x2F;h1&gt;
+&lt;p&gt;Vous pouvez trouver le dépôt &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;maxletemple&#x2F;uTNT&quot;&gt;ici&lt;&#x2F;a&gt;, et mon rapport &lt;a href=&quot;https:&#x2F;&#x2F;mletemple.fr&#x2F;blog&#x2F;stage2a&#x2F;rapport.pdf&quot;&gt;ici&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="fr">
+        <title>RISCV-EIRB</title>
+        <published>2023-05-23T00:00:00+00:00</published>
+        <updated>2023-05-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/blog/riscv-processor/"/>
+        <id>https://mletemple.fr/blog/riscv-processor/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/blog/riscv-processor/">&lt;p&gt;Mon plus grand projet durant mon S8 a été la mise en œuvre d&#x27;un processeur RISCV RV32I sur une carte FPGA Nexys A7. J&#x27;étais dans une équipe de six étudiants, et mon travail consistait à créer des binaires de test afin de valider chaque instruction. Une fois le processeur terminé, j&#x27;ai dû configurer la toolchain gcc pour fonctionner sur notre processeur.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;plus-d-infos&quot;&gt;Plus d&#x27;infos&lt;&#x2F;h2&gt;
+&lt;p&gt;Le code peut être trouvé sur le &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;maxletemple&#x2F;riscv_eirb&quot;&gt;dépôt github&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="fr">
+        <title>Boucles à verrouillage de phase</title>
+        <published>2023-03-19T00:00:00+00:00</published>
+        <updated>2023-03-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/blog/pll/"/>
+        <id>https://mletemple.fr/blog/pll/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/blog/pll/">&lt;p&gt;Une boucle à verrouillage de phase (PLL) est un circuit électronique qui peut être utilisé pour générer un signal de sortie synchronisé en fréquence et en phase avec un signal d&#x27;entrée.
+La fonction principale d&#x27;une PLL est de suivre et de synchroniser la fréquence et la phase d&#x27;un signal de référence avec un signal de sortie.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+&lt;img class=&quot;transparent no-hover&quot;alt=&quot;Boucle à verrouillage de phase analogique&quot;src=&quot;pll.svg&quot;&#x2F;&gt;
+&lt;figcaption&gt;Boucle à verrouillage de phase analogique&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h1 id=&quot;detecteur-de-phase&quot;&gt;Détecteur de phase&lt;&#x2F;h1&gt;
+&lt;p&gt;Le détecteur de phase reçoit en entrée deux signaux $v1(t)$ et $v2(t)$ et renvoie un signal $v(t)=K_d.f(\Phi_{ref}-\Phi_{osc})$.&lt;&#x2F;p&gt;
+&lt;p&gt;Les détecteurs de phase usuels sont le mélangeur équilibré (pour les signaux sinusoïdaux) ou le comparateur XOR (pour les signaux numériques).&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;filtre-passe-bas&quot;&gt;Filtre passe-bas&lt;&#x2F;h1&gt;
+&lt;p&gt;L&#x27;objectif principal du filtre passe-bas est de générer la tension utilisée pour le VCO.
+Habituellement, la fonction de transfert est $F(p)=\frac{1}{1+\tau P}$ avec $\tau = RC$ pour un filtre RC.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;vco&quot;&gt;VCO&lt;&#x2F;h1&gt;
+&lt;p&gt;Le VCO vise à générer le signal de sortie. Le signal de sortie est linéaire autour de sa pulsation de travail.
+En effet, $\omega_{VCO} = \omega_{1} + K_0(U_{VCO} - U_1)$, avec $K_0$ le gain du VCO.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;extension-pour-les-synthetiseurs-de-frequence&quot;&gt;Extension pour les synthétiseurs de fréquence&lt;&#x2F;h1&gt;
+&lt;p&gt;Afin de synthétiser des fréquences plus élevées, un diviseur de fréquence peut être ajouté sur la branche de rétroaction. De cette manière,
+$f_{VCO}=N.f_{ref}$. $f_{ref}$ est le signal de référence, il est appelé pas de synthèse. En effet, pour $N = N+1$.
+$f_{VCO}=N.f_{ref} + f_{ref}$&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;rappel&quot;&gt;Rappel&lt;&#x2F;h1&gt;
+&lt;p&gt;Fonctions et valeurs utiles :&lt;&#x2F;p&gt;
+&lt;p&gt;Fonction de transfert d&#x27;une PLL linéarisée sans diviseur :&lt;&#x2F;p&gt;
+&lt;p&gt;$$H(p)=\frac{K_d K_0 F(p)}{p + K_d K_0 F(p)} = \frac{\omega _n ²}{\omega _n ² + 2\xi \omega _n p + p²}$$&lt;&#x2F;p&gt;
+&lt;p&gt;$$\omega _n = \sqrt{\frac{K_0 K_d}{\tau}} \ \xi = \frac{1}{2} \frac{\omega _n}{K_0 K_d}$$&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="fr">
+        <title>Pokémon Silicium</title>
+        <published>2022-12-10T00:00:00+00:00</published>
+        <updated>2022-12-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/blog/pokemon-silicium/"/>
+        <id>https://mletemple.fr/blog/pokemon-silicium/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/blog/pokemon-silicium/">&lt;p&gt;Pokémon silicium est une simulation d&#x27;un combat pokémon joueur contre joueur sur FPGA. La sortie est un affichage 256*160 utilisant VGA. Le jeu est contrôlé par le &lt;a href=&quot;https:&#x2F;&#x2F;digilent.com&#x2F;reference&#x2F;pmod&#x2F;pmodjstk&#x2F;start&quot;&gt;joystick PMOD de Digilent&lt;&#x2F;a&gt;. C&#x27;était un projet d&#x27;équipe pour valider mon S7 à mon école d&#x27;ingénieurs.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;implementation-vhdl&quot;&gt;Implémentation VHDL&lt;&#x2F;h1&gt;
+&lt;p&gt;La description de l&#x27;architecture est écrite exclusivement en VHDL. Nous avons travaillé en équipe de deux personnes. Mon partenaire a écrit la logique du jeu (gestion des registres de vie, boucle de jeu, table des types, etc ...). Mon travail consistait à convertir le bus série reçu par le joystick, à lui envoyer les entrées au format correct et à recevoir des informations sur l&#x27;état du jeu afin de les afficher. Je devais gérer la superposition et la transparence des sprites, l&#x27;affichage VGA pour créer une interface fluide et viable.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;conversion-des-images-en-rom&quot;&gt;Conversion des images en ROM&lt;&#x2F;h1&gt;
+&lt;p&gt;Pour afficher les sprites, j&#x27;ai dû convertir des fichiers .ppm en une ROM 8 bits écrite en VHDL. J&#x27;ai écrit un programme en C qui prend plusieurs images et les convertit en une seule ROM. Il crée également un fichier log, utile pour rechercher une adresse.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;console&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-console &quot;&gt;&lt;code class=&quot;language-console&quot; data-lang=&quot;console&quot;&gt;&lt;span&gt;.&#x2F;a.out img ROM_img.vhd ronflex_back.ppm ronflex_front.ppm mew_back.ppm mew_front.ppm rayquaza_back.ppm rayquaza_front.ppm torterra_back.ppm torterra_front.ppm brasegali_back.ppm brasegali_front.ppm pikachu_back.ppm pikachu_front.ppm ectoplasma_back.ppm ectoplasma_front.ppm tiplouf_back.ppm tiplouf_front.ppm
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;plus-d-infos&quot;&gt;Plus d&#x27;infos&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Les ressources et le code du projet peuvent être trouvés &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;maxletemple&#x2F;pokemon_silicium&quot;&gt;ici&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Téléchargez le rapport &lt;a href=&quot;https:&#x2F;&#x2F;mletemple.fr&#x2F;blog&#x2F;pokemon-silicium&#x2F;pokemon_silicium.pdf&quot;&gt;ici&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="fr">
+        <title>Shrek</title>
+        <published>2001-10-17T00:00:00+00:00</published>
+        <updated>2001-10-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Shrek
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/blog/shrek/"/>
+        <id>https://mletemple.fr/blog/shrek/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/blog/shrek/">&lt;div class=&quot;crt scanlines&quot; aria-hidden=&quot;true&quot;&gt;
+	&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;######################################################################################
+&lt;&#x2F;span&gt;&lt;span&gt;#                                                                                    # 
+&lt;&#x2F;span&gt;&lt;span&gt;#                            ,.--------._                                            #
+&lt;&#x2F;span&gt;&lt;span&gt;#                           &#x2F;            &amp;#39;&amp;#39;.                                         #
+&lt;&#x2F;span&gt;&lt;span&gt;#                         ,&amp;#39;                \     |&amp;quot;\                &#x2F;\          &#x2F;\  #
+&lt;&#x2F;span&gt;&lt;span&gt;#                &#x2F;&amp;quot;|     &#x2F;                   \    |__&amp;quot;              ( \\        &#x2F;&#x2F; ) #
+&lt;&#x2F;span&gt;&lt;span&gt;#               &amp;quot;_&amp;quot;|    &#x2F;           z#####z   \  &#x2F;&#x2F;                  \ \\      &#x2F;&#x2F; &#x2F;  #
+&lt;&#x2F;span&gt;&lt;span&gt;#                 \\  #####        ##------&amp;quot;.  \&#x2F;&#x2F;                    \_\\||||&#x2F;&#x2F;_&#x2F;   #
+&lt;&#x2F;span&gt;&lt;span&gt;#                  \\&#x2F;-----\     &#x2F;          &amp;quot;.  \                      \&#x2F; _  _ \     #
+&lt;&#x2F;span&gt;&lt;span&gt;#                   \|      \   |   ,,--..       \                    \&#x2F;|(O)(O)|     #
+&lt;&#x2F;span&gt;&lt;span&gt;#                   | ,.--._ \  (  | ##   \)      \                  \&#x2F; |      |     #
+&lt;&#x2F;span&gt;&lt;span&gt;#                   |(  ##  )&#x2F;   \ `-....-&#x2F;&#x2F;       |&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;_\&#x2F;  \      &#x2F;     #
+&lt;&#x2F;span&gt;&lt;span&gt;#                     &amp;#39;--&amp;#39;.&amp;quot;      \                \              &#x2F;&#x2F;     |____|      #
+&lt;&#x2F;span&gt;&lt;span&gt;#                  &#x2F;&amp;#39;    &#x2F;         ) --.            \            ||     &#x2F;      \     #
+&lt;&#x2F;span&gt;&lt;span&gt;#               ,..|     \.________&#x2F;    `-..         \   \       \|     \ 0  0 &#x2F;     #
+&lt;&#x2F;span&gt;&lt;span&gt;#            _,##&#x2F; |   ,&#x2F;   &#x2F;   \           \         \   \       U    &#x2F; \_&#x2F;&#x2F;_&#x2F;      #
+&lt;&#x2F;span&gt;&lt;span&gt;#          :###.-  |  ,&#x2F;   &#x2F;     \        &#x2F;&amp;#39; &amp;quot;&amp;quot;\      .\        (     &#x2F;              #
+&lt;&#x2F;span&gt;&lt;span&gt;#         &#x2F;####|   |   (.___________,---&amp;#39;,&#x2F;    |       |\=._____|  |_&#x2F;               #
+&lt;&#x2F;span&gt;&lt;span&gt;#        &#x2F;#####|   |     \__|__|__|__|_,&#x2F;             |####\    |  ||                #
+&lt;&#x2F;span&gt;&lt;span&gt;#       &#x2F;######\   \      \__________&#x2F;                &#x2F;#####|   \  ||                #
+&lt;&#x2F;span&gt;&lt;span&gt;#      &#x2F;|#######`. `\                                &#x2F;#######\   | ||                #
+&lt;&#x2F;span&gt;&lt;span&gt;#     &#x2F;++\#########\  \                      _,&amp;#39;    _&#x2F;#########\ | ||                #
+&lt;&#x2F;span&gt;&lt;span&gt;#    &#x2F;++++|#########|  \      .---..       ,&#x2F;      ,&amp;#39;##########.\|_||  Donkey By     #
+&lt;&#x2F;span&gt;&lt;span&gt;#   &#x2F;&#x2F;++++|#########\.  \.              ,-&#x2F;      ,&amp;#39;########,+++++\\_\\ Hard&amp;#39;96       #
+&lt;&#x2F;span&gt;&lt;span&gt;#  &#x2F;++++++|##########\.   &amp;#39;._        _,&#x2F;       ,&amp;#39;######,&amp;#39;&amp;#39;++++++++\                  #
+&lt;&#x2F;span&gt;&lt;span&gt;# |+++++++|###########|       -----.&amp;quot;        _&amp;#39;#######&amp;#39; +++++++++++\                 #
+&lt;&#x2F;span&gt;&lt;span&gt;# |+++++++|############\.     \\     &#x2F;&#x2F;      &#x2F;#######&#x2F;++++ S@yaN +++\                #
+&lt;&#x2F;span&gt;&lt;span&gt;#      ________________________\\___&#x2F;&#x2F;______________________________________         #
+&lt;&#x2F;span&gt;&lt;span&gt;#     &#x2F; ____________________________________________________________________)        #
+&lt;&#x2F;span&gt;&lt;span&gt;#    &#x2F; &#x2F;              _                                             _                #
+&lt;&#x2F;span&gt;&lt;span&gt;#    | |             | |                                           | |               #
+&lt;&#x2F;span&gt;&lt;span&gt;#     \ \            | | _           ____           ____           | |  _            #
+&lt;&#x2F;span&gt;&lt;span&gt;#      \ \           | || \         &#x2F; ___)         &#x2F; _  )          | | &#x2F; )           #
+&lt;&#x2F;span&gt;&lt;span&gt;#  _____) )          | | | |        | |           (  __ &#x2F;          | |&amp;lt; (            #
+&lt;&#x2F;span&gt;&lt;span&gt;# (______&#x2F;           |_| |_|        |_|            \_____)         |_| \_)           #
+&lt;&#x2F;span&gt;&lt;span&gt;#                                                                           19.08.02 #
+&lt;&#x2F;span&gt;&lt;span&gt;######################################################################################
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+</feed>

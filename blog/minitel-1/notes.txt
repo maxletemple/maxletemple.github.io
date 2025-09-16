@@ -1,0 +1,16 @@
+Gestionnaire de fenêtres: FVWM
+
+«On nous dit que le monde entier nous envie le Minitel. Je ne sais pas s’il nous l’envie, messieurs, mais je peux en tout cas vous dire une chose avec certitude, c’est qu’il ne nous l’achète pas.» Bruno Lussato
+
+Pour lancer le serveur X, mettre dans le .profile:
+
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+  exec startx -- -nocursor
+fi
+
+packages importants: xorg libevent-dev libfontconfig-dev libfreetype6-dev libx11-dev libxext-dev libxft-dev libxkbcommon-dev libxrandr-dev libxrender-dev libxt-dev
+
+cmdline.txt: video=Composite-1:720x576@50i
+
+config.txt: - sdtv_disable_colourburst=1
+            - dtoverlay=vc4-kms-v3d,composite=1

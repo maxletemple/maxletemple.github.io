@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
+    <title>Maxime Letemple - python</title>
+    <link rel="self" type="application/atom+xml" href="https://mletemple.fr/tags/python/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://mletemple.fr"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-11-03T00:00:00+00:00</updated>
+    <id>https://mletemple.fr/tags/python/atom.xml</id>
+    <entry xml:lang="fr">
+        <title>Film Polaroid</title>
+        <published>2024-11-03T00:00:00+00:00</published>
+        <updated>2024-11-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/blog/polaroid-film/"/>
+        <id>https://mletemple.fr/blog/polaroid-film/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/blog/polaroid-film/">&lt;p&gt;Polaroid Film est un outil python utilisé pour stocker une base de données de films. Les éléments suivants peuvent être stockés :&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Titre&lt;&#x2F;li&gt;
+&lt;li&gt;Année de production&lt;&#x2F;li&gt;
+&lt;li&gt;Réalisateur&lt;&#x2F;li&gt;
+&lt;li&gt;Format (Film, série ou film d&#x27;animation)&lt;&#x2F;li&gt;
+&lt;li&gt;Acteurs&lt;&#x2F;li&gt;
+&lt;li&gt;Note personnelle&lt;&#x2F;li&gt;
+&lt;li&gt;Durée&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Un document peut être généré avec une affiche style Polaroid. Le document peut être personnalisé et utilise la bibliothèque Pillow.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;exemple&quot;&gt;Exemple&lt;&#x2F;h2&gt;
+&lt;p&gt;La sortie par défaut est un Polaroid de 8,5 cm * 12,0 cm, arrangé dans un document PDF avec 4 Polaroids par page.&lt;&#x2F;p&gt;
+&lt;img class=&quot;no-hover&quot;alt=&quot;Exemple de sortie&quot;src=&quot;example_output.png&quot;&#x2F;&gt;&lt;h1 id=&quot;plus-d-infos&quot;&gt;Plus d&#x27;infos&lt;&#x2F;h1&gt;
+&lt;p&gt;Le code peut être trouvé sur le &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;maxletemple&#x2F;polaroid_film&quot;&gt;dépôt github&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

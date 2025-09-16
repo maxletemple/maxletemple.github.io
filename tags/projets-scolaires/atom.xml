@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
+    <title>Maxime Letemple - projets scolaires</title>
+    <link rel="self" type="application/atom+xml" href="https://mletemple.fr/tags/projets-scolaires/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://mletemple.fr"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-05-23T00:00:00+00:00</updated>
+    <id>https://mletemple.fr/tags/projets-scolaires/atom.xml</id>
+    <entry xml:lang="fr">
+        <title>RISCV-EIRB</title>
+        <published>2023-05-23T00:00:00+00:00</published>
+        <updated>2023-05-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/blog/riscv-processor/"/>
+        <id>https://mletemple.fr/blog/riscv-processor/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/blog/riscv-processor/">&lt;p&gt;Mon plus grand projet durant mon S8 a été la mise en œuvre d&#x27;un processeur RISCV RV32I sur une carte FPGA Nexys A7. J&#x27;étais dans une équipe de six étudiants, et mon travail consistait à créer des binaires de test afin de valider chaque instruction. Une fois le processeur terminé, j&#x27;ai dû configurer la toolchain gcc pour fonctionner sur notre processeur.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;plus-d-infos&quot;&gt;Plus d&#x27;infos&lt;&#x2F;h2&gt;
+&lt;p&gt;Le code peut être trouvé sur le &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;maxletemple&#x2F;riscv_eirb&quot;&gt;dépôt github&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="fr">
+        <title>Pokémon Silicium</title>
+        <published>2022-12-10T00:00:00+00:00</published>
+        <updated>2022-12-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/blog/pokemon-silicium/"/>
+        <id>https://mletemple.fr/blog/pokemon-silicium/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/blog/pokemon-silicium/">&lt;p&gt;Pokémon silicium est une simulation d&#x27;un combat pokémon joueur contre joueur sur FPGA. La sortie est un affichage 256*160 utilisant VGA. Le jeu est contrôlé par le &lt;a href=&quot;https:&#x2F;&#x2F;digilent.com&#x2F;reference&#x2F;pmod&#x2F;pmodjstk&#x2F;start&quot;&gt;joystick PMOD de Digilent&lt;&#x2F;a&gt;. C&#x27;était un projet d&#x27;équipe pour valider mon S7 à mon école d&#x27;ingénieurs.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;implementation-vhdl&quot;&gt;Implémentation VHDL&lt;&#x2F;h1&gt;
+&lt;p&gt;La description de l&#x27;architecture est écrite exclusivement en VHDL. Nous avons travaillé en équipe de deux personnes. Mon partenaire a écrit la logique du jeu (gestion des registres de vie, boucle de jeu, table des types, etc ...). Mon travail consistait à convertir le bus série reçu par le joystick, à lui envoyer les entrées au format correct et à recevoir des informations sur l&#x27;état du jeu afin de les afficher. Je devais gérer la superposition et la transparence des sprites, l&#x27;affichage VGA pour créer une interface fluide et viable.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;conversion-des-images-en-rom&quot;&gt;Conversion des images en ROM&lt;&#x2F;h1&gt;
+&lt;p&gt;Pour afficher les sprites, j&#x27;ai dû convertir des fichiers .ppm en une ROM 8 bits écrite en VHDL. J&#x27;ai écrit un programme en C qui prend plusieurs images et les convertit en une seule ROM. Il crée également un fichier log, utile pour rechercher une adresse.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;console&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-console &quot;&gt;&lt;code class=&quot;language-console&quot; data-lang=&quot;console&quot;&gt;&lt;span&gt;.&#x2F;a.out img ROM_img.vhd ronflex_back.ppm ronflex_front.ppm mew_back.ppm mew_front.ppm rayquaza_back.ppm rayquaza_front.ppm torterra_back.ppm torterra_front.ppm brasegali_back.ppm brasegali_front.ppm pikachu_back.ppm pikachu_front.ppm ectoplasma_back.ppm ectoplasma_front.ppm tiplouf_back.ppm tiplouf_front.ppm
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;plus-d-infos&quot;&gt;Plus d&#x27;infos&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Les ressources et le code du projet peuvent être trouvés &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;maxletemple&#x2F;pokemon_silicium&quot;&gt;ici&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Téléchargez le rapport &lt;a href=&quot;https:&#x2F;&#x2F;mletemple.fr&#x2F;blog&#x2F;pokemon-silicium&#x2F;pokemon_silicium.pdf&quot;&gt;ici&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>

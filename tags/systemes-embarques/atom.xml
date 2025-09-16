@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
+    <title>Maxime Letemple - systèmes embarqués</title>
+    <link rel="self" type="application/atom+xml" href="https://mletemple.fr/tags/systemes-embarques/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://mletemple.fr"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-02-23T00:00:00+00:00</updated>
+    <id>https://mletemple.fr/tags/systemes-embarques/atom.xml</id>
+    <entry xml:lang="fr">
+        <title>Minitel #2</title>
+        <published>2025-02-23T00:00:00+00:00</published>
+        <updated>2025-02-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/blog/minitel-2/"/>
+        <id>https://mletemple.fr/blog/minitel-2/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/blog/minitel-2/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h1&gt;
+&lt;p&gt;La première étape pour la mise en fonctionnement de la carte est le choix du système d&#x27;exploitation. Le but de la Raspberry Pi est d&#x27;exécuter Home Assistant, ainsi que le serveur X avec le gestionnaire de fenêtre.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="fr">
+        <title>Minitel #1</title>
+        <published>2025-02-18T00:00:00+00:00</published>
+        <updated>2025-02-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/blog/minitel-1/"/>
+        <id>https://mletemple.fr/blog/minitel-1/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/blog/minitel-1/">&lt;h1 id=&quot;presentation&quot;&gt;Présentation&lt;&#x2F;h1&gt;
+&lt;p&gt;Le Minitel est un terminal informatique développé en France dans les années 1980, permettant l&#x27;accès à divers services en ligne avant l&#x27;avènement d&#x27;Internet. Il est devenu un objet mythique de son époque, s&#x27;invitant dans beaucoup de foyers français et leur donnant accès à un nombre important de services indispensables, comme le Minitel rose. Le réseau Télétel a été fermé en 2012, rendant quasiment inutilisables les Minitels. On peut donc en trouver pour quelques euros dans les brocantes.&lt;&#x2F;p&gt;
+&lt;p&gt;L&#x27;objectif de ce projet est de remettre au goût du jour le Minitel en utilisant l&#x27;écran cathodique de celui-ci avec la sortie composite d&#x27;une Raspberry Pi 5. On installera &lt;a href=&quot;https:&#x2F;&#x2F;www.home-assistant.io&#x2F;&quot;&gt;Home Assistant&lt;&#x2F;a&gt;, qui est à la fois un système d&#x27;exploitation et un serveur central très utilisé dans le monde de la domotique.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;premiers-pas-avec-le-minitel&quot;&gt;Premiers pas avec le Minitel&lt;&#x2F;h1&gt;
+&lt;p&gt;Le Minitel est composé de deux cartes:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;La carte vidéo, qui se charge également de l&#x27;alimentation&lt;&#x2F;li&gt;
+&lt;li&gt;La carte mère, qui communique avec le réseau Télétel et envoie le signal vidéo à l&#x27;autre carte&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;figure&gt;
+&lt;img class=&quot;no-hover&quot;src=&quot;minitel2.jpeg&quot;&#x2F;&gt;
+&lt;figcaption&gt;Minitel avec le capot ouvert, on distingue les deux cartes.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Seule la carte vidéo sera utile ici. La carte mère sera donc enlevée et remplacée par une Raspberry Pi 5 et une carte convertissant le signal composite en un signal spécifique à l&#x27;écran cathodique. Pour l&#x27;affichage, deux signaux sont envoyés à la carte vidéo: un signal de synchronisation et un signal de donnée. Je rentrerai dans les détails dans un post dédié, mais le signal composite devra être décomposé et modifié, d&#x27;où la nécessité d&#x27;une carte de conversion vidéo.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;avancement&quot;&gt;Avancement:&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Utilisation de l&#x27;écran cathodique du Minitel
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Validation de la sortie composite de la Raspberry Pi&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Conversion du signal composite en un signal compréhensible par le Minitel&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Installation du système d&#x27;exploitation sur la Rasberry Pi
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Installation de Home Assistant&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Installation d&#x27;un gestionnaire de fenêtres et mise en place de la routine de démarrage&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Développement des applications
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Ajout d&#x27;un agent intelligent basé sur un LLM, capable d&#x27;intéragir avec les fonctions domotiques de Home Assistant&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Création d&#x27;une interface pour l&#x27;affichage&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>

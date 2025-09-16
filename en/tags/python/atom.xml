@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Maxime Letemple - Python</title>
+    <link rel="self" type="application/atom+xml" href="https://mletemple.fr/en/tags/python/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://mletemple.fr"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-11-03T00:00:00+00:00</updated>
+    <id>https://mletemple.fr/en/tags/python/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Polaroid film</title>
+        <published>2024-11-03T00:00:00+00:00</published>
+        <updated>2024-11-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/en/blog/polaroid-film/"/>
+        <id>https://mletemple.fr/en/blog/polaroid-film/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/en/blog/polaroid-film/">&lt;p&gt;Polaroid film is a python tool used to store a database of movies. The following items can be stored:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title&lt;&#x2F;li&gt;
+&lt;li&gt;Year of production&lt;&#x2F;li&gt;
+&lt;li&gt;Director&lt;&#x2F;li&gt;
+&lt;li&gt;Format (Film, series of animated film)&lt;&#x2F;li&gt;
+&lt;li&gt;Actors&lt;&#x2F;li&gt;
+&lt;li&gt;Personal rating&lt;&#x2F;li&gt;
+&lt;li&gt;Duration&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;A document can be generated with Polaroid style poster. The document can be customized and uses the Pillow library.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;&#x2F;h2&gt;
+&lt;p&gt;The default output is an 8.5 cm * 12.0 cm Polaroid, arranged in a PDF document with 4 Polaroids per page.&lt;&#x2F;p&gt;
+&lt;img class=&quot;no-hover&quot;alt=&quot;Example output&quot;src=&quot;example_output.png&quot;&#x2F;&gt;&lt;h1 id=&quot;more-infos&quot;&gt;More infos&lt;&#x2F;h1&gt;
+&lt;p&gt;The code can be found on the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;maxletemple&#x2F;polaroid_film&quot;&gt;github repository&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

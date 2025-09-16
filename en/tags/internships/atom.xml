@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Maxime Letemple - internships</title>
+    <link rel="self" type="application/atom+xml" href="https://mletemple.fr/en/tags/internships/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://mletemple.fr"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-09-10T00:00:00+00:00</updated>
+    <id>https://mletemple.fr/en/tags/internships/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Porting a network measurement infrastructure on an unikernel</title>
+        <published>2023-09-10T00:00:00+00:00</published>
+        <updated>2023-09-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/en/blog/stage2a/"/>
+        <id>https://mletemple.fr/en/blog/stage2a/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/en/blog/stage2a/">&lt;p&gt;The main objective of this internship was the porting of a network measurement infrastructure on an unikernel, named &lt;a href=&quot;https:&#x2F;&#x2F;www.caida.org&#x2F;catalog&#x2F;software&#x2F;scamper&#x2F;&quot;&gt;Scamper&lt;&#x2F;a&gt;. A unikernel is a specialized, lightweight, single-purpose virtual machine that combines an application and the minimal set of operating system (OS) components required to run it. Unlike traditional operating systems, which are designed to support multiple applications and users, a unikernel is designed to run a single application, including only the necessary parts of the OS as part of its build. The unikernel used here is &lt;a href=&quot;https:&#x2F;&#x2F;unikraft.org&#x2F;&quot;&gt;Unikraft&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+&lt;img class=&quot;&quot;alt=&quot;Comparizon between unikernels and VMs&quot;src=&quot;unikernel_vs_vm.png&quot;&#x2F;&gt;
+&lt;figcaption&gt;Comparizon between unikernels and VMs&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h1 id=&quot;results&quot;&gt;Results&lt;&#x2F;h1&gt;
+&lt;p&gt;Compared to traditional solutions like virtual machines and Docker containers, uTNT demonstrated significantly better performance. This internship showcased the potential of unikernels as a platform for high-performance and lightweight network measurement applications.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+&lt;img class=&quot;&quot;alt=&quot;RAM usage of my work compared to Debian on a VM&quot;src=&quot;ram_unikernel.png&quot;&#x2F;&gt;
+&lt;figcaption&gt;RAM usage of my work compared to Debian on a VM&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h1 id=&quot;more-infos&quot;&gt;More infos&lt;&#x2F;h1&gt;
+&lt;p&gt;You can find the repo &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;maxletemple&#x2F;uTNT&quot;&gt;here&lt;&#x2F;a&gt;, and my report &lt;a href=&quot;https:&#x2F;&#x2F;mletemple.fr&#x2F;en&#x2F;blog&#x2F;stage2a&#x2F;rapport.pdf&quot;&gt;here&lt;&#x2F;a&gt;(in french).&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

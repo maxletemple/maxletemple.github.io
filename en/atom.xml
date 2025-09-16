@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Maxime Letemple</title>
+    <link rel="self" type="application/atom+xml" href="https://mletemple.fr/en/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://mletemple.fr"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-11-03T00:00:00+00:00</updated>
+    <id>https://mletemple.fr/en/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Polaroid film</title>
+        <published>2024-11-03T00:00:00+00:00</published>
+        <updated>2024-11-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/en/blog/polaroid-film/"/>
+        <id>https://mletemple.fr/en/blog/polaroid-film/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/en/blog/polaroid-film/">&lt;p&gt;Polaroid film is a python tool used to store a database of movies. The following items can be stored:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title&lt;&#x2F;li&gt;
+&lt;li&gt;Year of production&lt;&#x2F;li&gt;
+&lt;li&gt;Director&lt;&#x2F;li&gt;
+&lt;li&gt;Format (Film, series of animated film)&lt;&#x2F;li&gt;
+&lt;li&gt;Actors&lt;&#x2F;li&gt;
+&lt;li&gt;Personal rating&lt;&#x2F;li&gt;
+&lt;li&gt;Duration&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;A document can be generated with Polaroid style poster. The document can be customized and uses the Pillow library.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;&#x2F;h2&gt;
+&lt;p&gt;The default output is an 8.5 cm * 12.0 cm Polaroid, arranged in a PDF document with 4 Polaroids per page.&lt;&#x2F;p&gt;
+&lt;img class=&quot;no-hover&quot;alt=&quot;Example output&quot;src=&quot;example_output.png&quot;&#x2F;&gt;&lt;h1 id=&quot;more-infos&quot;&gt;More infos&lt;&#x2F;h1&gt;
+&lt;p&gt;The code can be found on the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;maxletemple&#x2F;polaroid_film&quot;&gt;github repository&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Porting a network measurement infrastructure on an unikernel</title>
+        <published>2023-09-10T00:00:00+00:00</published>
+        <updated>2023-09-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/en/blog/stage2a/"/>
+        <id>https://mletemple.fr/en/blog/stage2a/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/en/blog/stage2a/">&lt;p&gt;The main objective of this internship was the porting of a network measurement infrastructure on an unikernel, named &lt;a href=&quot;https:&#x2F;&#x2F;www.caida.org&#x2F;catalog&#x2F;software&#x2F;scamper&#x2F;&quot;&gt;Scamper&lt;&#x2F;a&gt;. A unikernel is a specialized, lightweight, single-purpose virtual machine that combines an application and the minimal set of operating system (OS) components required to run it. Unlike traditional operating systems, which are designed to support multiple applications and users, a unikernel is designed to run a single application, including only the necessary parts of the OS as part of its build. The unikernel used here is &lt;a href=&quot;https:&#x2F;&#x2F;unikraft.org&#x2F;&quot;&gt;Unikraft&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+&lt;img class=&quot;&quot;alt=&quot;Comparizon between unikernels and VMs&quot;src=&quot;unikernel_vs_vm.png&quot;&#x2F;&gt;
+&lt;figcaption&gt;Comparizon between unikernels and VMs&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h1 id=&quot;results&quot;&gt;Results&lt;&#x2F;h1&gt;
+&lt;p&gt;Compared to traditional solutions like virtual machines and Docker containers, uTNT demonstrated significantly better performance. This internship showcased the potential of unikernels as a platform for high-performance and lightweight network measurement applications.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+&lt;img class=&quot;&quot;alt=&quot;RAM usage of my work compared to Debian on a VM&quot;src=&quot;ram_unikernel.png&quot;&#x2F;&gt;
+&lt;figcaption&gt;RAM usage of my work compared to Debian on a VM&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h1 id=&quot;more-infos&quot;&gt;More infos&lt;&#x2F;h1&gt;
+&lt;p&gt;You can find the repo &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;maxletemple&#x2F;uTNT&quot;&gt;here&lt;&#x2F;a&gt;, and my report &lt;a href=&quot;https:&#x2F;&#x2F;mletemple.fr&#x2F;en&#x2F;blog&#x2F;stage2a&#x2F;rapport.pdf&quot;&gt;here&lt;&#x2F;a&gt;(in french).&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>RISCV-EIRB</title>
+        <published>2023-05-23T00:00:00+00:00</published>
+        <updated>2023-05-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/en/blog/riscv-processor/"/>
+        <id>https://mletemple.fr/en/blog/riscv-processor/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/en/blog/riscv-processor/">&lt;p&gt;My biggest project during my S8 was the implementation of a RV32I RISCV processor on a Nexys A7 FPGA board. I was in a team of six students, and my job was to create test binaries in order to validate each instruction. When the processor was done, I had to set the gcc toolchain to work on our processor.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;more-infos&quot;&gt;More infos&lt;&#x2F;h1&gt;
+&lt;p&gt;The code can be found on the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;maxletemple&#x2F;riscv_eirb&quot;&gt;github repository&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Phase-locked Loops</title>
+        <published>2023-03-19T00:00:00+00:00</published>
+        <updated>2023-03-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/en/blog/pll/"/>
+        <id>https://mletemple.fr/en/blog/pll/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/en/blog/pll/">&lt;p&gt;A PLL is an electronic circuit that can be used to generate an output signal that is synchronized in frequency and phase with an input signal.
+The main function of a PLL is to track and synchronize the frequency and phase of a reference signal with an output signal.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+&lt;img class=&quot;transparent no-hover&quot;alt=&quot;Analog phase locked loop&quot;src=&quot;pll.svg&quot;&#x2F;&gt;
+&lt;figcaption&gt;Analog phase locked loop&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h1 id=&quot;phase-detector&quot;&gt;Phase Detector&lt;&#x2F;h1&gt;
+&lt;p&gt;The phase detector receives in input two signals $v1(t)$ and $v2(t)$ and returns a signal $v(t)=K_d.f(\Phi_{ref}-\Phi_{osc})$.&lt;&#x2F;p&gt;
+&lt;p&gt;Usual phase detectors are the Balanced Mixer(for sinusoid signals) or XOR comparator(for digital signals).&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;low-pass-filter&quot;&gt;Low-pass filter&lt;&#x2F;h1&gt;
+&lt;p&gt;The main objective of the low-pass filter is to generate the voltage used for the VCO.
+Usually, the transfer function is $F(p)=\frac{1}{1+\tau P}$ with $\tau = RC$ for a RC filter.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;vco&quot;&gt;VCO&lt;&#x2F;h1&gt;
+&lt;p&gt;The VCO aims to generate the output signal. The output signal is linear around its working pulsation.
+Indeed, $\omega_{VCO} = \omega_{1} + K_0(U_{VCO} - U_1)$, with $K_0$ the gain of the VCO.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;extension-for-frequency-synthesizers&quot;&gt;Extension for frequency synthesizers&lt;&#x2F;h1&gt;
+&lt;p&gt;In order to synthesize higher frequencies, a frequency divider can be added on the feedback branch. By this way,
+$f_{VCO}=N.f_{ref}$. $f_{ref}$ is the reference signal, is is called step of synthesis. Indeed, for $N = N+1$.
+$f_{VCO}=N.f_{ref} + f_{ref}$&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;reminder&quot;&gt;Reminder&lt;&#x2F;h1&gt;
+&lt;p&gt;Useful functions and values:&lt;&#x2F;p&gt;
+&lt;p&gt;Transfert function of a linearized PLL without divider:&lt;&#x2F;p&gt;
+&lt;p&gt;$$H(p)=\frac{K_d K_0 F(p)}{p + K_d K_0 F(p)} = \frac{\omega _n ²}{\omega _n ² + 2\xi \omega _n p + p²}$$&lt;&#x2F;p&gt;
+&lt;p&gt;$$\omega _n = \sqrt{\frac{K_0 K_d}{\tau}} \ \xi = \frac{1}{2} \frac{\omega _n}{K_0 K_d}$$&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Pokémon Silicium</title>
+        <published>2022-12-10T00:00:00+00:00</published>
+        <updated>2022-12-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/en/blog/pokemon-silicium/"/>
+        <id>https://mletemple.fr/en/blog/pokemon-silicium/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/en/blog/pokemon-silicium/">&lt;p&gt;Pokémon silicium is a simulation of a player versus player pokémon fight on FPGA. The output is a 256*160 display using VGA. The game is controlled by the &lt;a href=&quot;https:&#x2F;&#x2F;digilent.com&#x2F;reference&#x2F;pmod&#x2F;pmodjstk&#x2F;start&quot;&gt;PMOD joystick from Digilent&lt;&#x2F;a&gt;. This was a team project in order to validate my S7 at my engineering school.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;vhdl-implementation&quot;&gt;VHDL implementation&lt;&#x2F;h1&gt;
+&lt;p&gt;The description of the architecture is written exclusively in VHDL. We worked as a two person team. My partner wrote the game logic (managing life registers, game loop, type table, etc ...). My job was to convert the serial bus received by the joystick, to send him the inputs in the correct format and to receive informations on the status of the game in order to display them. I had to manage sprite superpostion and transparency, VGA display to create a fluid and viable interface.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;converting-pictures-to-rom&quot;&gt;Converting pictures to ROM&lt;&#x2F;h1&gt;
+&lt;p&gt;In order to display sprites, I had to convert .ppm files in a 8 bits ROM written in VHDL. I wrote a programm in C that takes several pictures and convert them in one ROM. It also creates a log file, which is useful when looking for an adress.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;console&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-console &quot;&gt;&lt;code class=&quot;language-console&quot; data-lang=&quot;console&quot;&gt;&lt;span&gt;.&#x2F;a.out img ROM_img.vhd ronflex_back.ppm ronflex_front.ppm mew_back.ppm mew_front.ppm rayquaza_back.ppm rayquaza_front.ppm torterra_back.ppm torterra_front.ppm brasegali_back.ppm brasegali_front.ppm pikachu_back.ppm pikachu_front.ppm ectoplasma_back.ppm ectoplasma_front.ppm tiplouf_back.ppm tiplouf_front.ppm
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;more-infos&quot;&gt;More infos&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Resources and project code can be found &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;maxletemple&#x2F;pokemon_silicium&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Download the report &lt;a href=&quot;https:&#x2F;&#x2F;mletemple.fr&#x2F;en&#x2F;blog&#x2F;pokemon-silicium&#x2F;pokemon_silicium.pdf&quot;&gt;here&lt;&#x2F;a&gt; (in french).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Shrek</title>
+        <published>2001-10-17T00:00:00+00:00</published>
+        <updated>2001-10-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Shrek
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/en/blog/shrek/"/>
+        <id>https://mletemple.fr/en/blog/shrek/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/en/blog/shrek/">&lt;div class=&quot;crt scanlines&quot; aria-hidden=&quot;true&quot;&gt;
+	&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;######################################################################################
+&lt;&#x2F;span&gt;&lt;span&gt;#                                                                                    # 
+&lt;&#x2F;span&gt;&lt;span&gt;#                            ,.--------._                                            #
+&lt;&#x2F;span&gt;&lt;span&gt;#                           &#x2F;            &amp;#39;&amp;#39;.                                         #
+&lt;&#x2F;span&gt;&lt;span&gt;#                         ,&amp;#39;                \     |&amp;quot;\                &#x2F;\          &#x2F;\  #
+&lt;&#x2F;span&gt;&lt;span&gt;#                &#x2F;&amp;quot;|     &#x2F;                   \    |__&amp;quot;              ( \\        &#x2F;&#x2F; ) #
+&lt;&#x2F;span&gt;&lt;span&gt;#               &amp;quot;_&amp;quot;|    &#x2F;           z#####z   \  &#x2F;&#x2F;                  \ \\      &#x2F;&#x2F; &#x2F;  #
+&lt;&#x2F;span&gt;&lt;span&gt;#                 \\  #####        ##------&amp;quot;.  \&#x2F;&#x2F;                    \_\\||||&#x2F;&#x2F;_&#x2F;   #
+&lt;&#x2F;span&gt;&lt;span&gt;#                  \\&#x2F;-----\     &#x2F;          &amp;quot;.  \                      \&#x2F; _  _ \     #
+&lt;&#x2F;span&gt;&lt;span&gt;#                   \|      \   |   ,,--..       \                    \&#x2F;|(O)(O)|     #
+&lt;&#x2F;span&gt;&lt;span&gt;#                   | ,.--._ \  (  | ##   \)      \                  \&#x2F; |      |     #
+&lt;&#x2F;span&gt;&lt;span&gt;#                   |(  ##  )&#x2F;   \ `-....-&#x2F;&#x2F;       |&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;_\&#x2F;  \      &#x2F;     #
+&lt;&#x2F;span&gt;&lt;span&gt;#                     &amp;#39;--&amp;#39;.&amp;quot;      \                \              &#x2F;&#x2F;     |____|      #
+&lt;&#x2F;span&gt;&lt;span&gt;#                  &#x2F;&amp;#39;    &#x2F;         ) --.            \            ||     &#x2F;      \     #
+&lt;&#x2F;span&gt;&lt;span&gt;#               ,..|     \.________&#x2F;    `-..         \   \       \|     \ 0  0 &#x2F;     #
+&lt;&#x2F;span&gt;&lt;span&gt;#            _,##&#x2F; |   ,&#x2F;   &#x2F;   \           \         \   \       U    &#x2F; \_&#x2F;&#x2F;_&#x2F;      #
+&lt;&#x2F;span&gt;&lt;span&gt;#          :###.-  |  ,&#x2F;   &#x2F;     \        &#x2F;&amp;#39; &amp;quot;&amp;quot;\      .\        (     &#x2F;              #
+&lt;&#x2F;span&gt;&lt;span&gt;#         &#x2F;####|   |   (.___________,---&amp;#39;,&#x2F;    |       |\=._____|  |_&#x2F;               #
+&lt;&#x2F;span&gt;&lt;span&gt;#        &#x2F;#####|   |     \__|__|__|__|_,&#x2F;             |####\    |  ||                #
+&lt;&#x2F;span&gt;&lt;span&gt;#       &#x2F;######\   \      \__________&#x2F;                &#x2F;#####|   \  ||                #
+&lt;&#x2F;span&gt;&lt;span&gt;#      &#x2F;|#######`. `\                                &#x2F;#######\   | ||                #
+&lt;&#x2F;span&gt;&lt;span&gt;#     &#x2F;++\#########\  \                      _,&amp;#39;    _&#x2F;#########\ | ||                #
+&lt;&#x2F;span&gt;&lt;span&gt;#    &#x2F;++++|#########|  \      .---..       ,&#x2F;      ,&amp;#39;##########.\|_||  Donkey By     #
+&lt;&#x2F;span&gt;&lt;span&gt;#   &#x2F;&#x2F;++++|#########\.  \.              ,-&#x2F;      ,&amp;#39;########,+++++\\_\\ Hard&amp;#39;96       #
+&lt;&#x2F;span&gt;&lt;span&gt;#  &#x2F;++++++|##########\.   &amp;#39;._        _,&#x2F;       ,&amp;#39;######,&amp;#39;&amp;#39;++++++++\                  #
+&lt;&#x2F;span&gt;&lt;span&gt;# |+++++++|###########|       -----.&amp;quot;        _&amp;#39;#######&amp;#39; +++++++++++\                 #
+&lt;&#x2F;span&gt;&lt;span&gt;# |+++++++|############\.     \\     &#x2F;&#x2F;      &#x2F;#######&#x2F;++++ S@yaN +++\                #
+&lt;&#x2F;span&gt;&lt;span&gt;#      ________________________\\___&#x2F;&#x2F;______________________________________         #
+&lt;&#x2F;span&gt;&lt;span&gt;#     &#x2F; ____________________________________________________________________)        #
+&lt;&#x2F;span&gt;&lt;span&gt;#    &#x2F; &#x2F;              _                                             _                #
+&lt;&#x2F;span&gt;&lt;span&gt;#    | |             | |                                           | |               #
+&lt;&#x2F;span&gt;&lt;span&gt;#     \ \            | | _           ____           ____           | |  _            #
+&lt;&#x2F;span&gt;&lt;span&gt;#      \ \           | || \         &#x2F; ___)         &#x2F; _  )          | | &#x2F; )           #
+&lt;&#x2F;span&gt;&lt;span&gt;#  _____) )          | | | |        | |           (  __ &#x2F;          | |&amp;lt; (            #
+&lt;&#x2F;span&gt;&lt;span&gt;# (______&#x2F;           |_| |_|        |_|            \_____)         |_| \_)           #
+&lt;&#x2F;span&gt;&lt;span&gt;#                                                                           19.08.02 #
+&lt;&#x2F;span&gt;&lt;span&gt;######################################################################################
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+</feed>
