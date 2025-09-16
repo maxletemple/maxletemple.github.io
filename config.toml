@@ -1,6 +1,6 @@
 title = "Maxime Letemple"
 
-base_url = "https://maxletemple.github.io"
+base_url = "https://mletemple.fr"
 theme = "duckquill"
 compile_sass = true
 generate_feeds = true
