@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
+    <title>Maxime Letemple - systèmes embarqués</title>
+    <link rel="self" type="application/atom+xml" href="https://mletemple.fr/tags/systemes-embarques/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://mletemple.fr"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-05-02T00:00:00+00:00</updated>
+    <id>https://mletemple.fr/tags/systemes-embarques/atom.xml</id>
+    <entry xml:lang="fr">
+        <title>Minitel</title>
+        <published>2026-05-02T00:00:00+00:00</published>
+        <updated>2026-05-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/blog/minitel/"/>
+        <id>https://mletemple.fr/blog/minitel/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/blog/minitel/">&lt;h1 id=&quot;presentation&quot;&gt;Présentation&lt;&#x2F;h1&gt;
+&lt;p&gt;Le Minitel est un terminal informatique développé en France dans les années 1980, permettant l&#x27;accès à divers services en ligne avant l&#x27;avènement d&#x27;Internet. Il est devenu un objet mythique de son époque, s&#x27;invitant dans beaucoup de foyers français et leur donnant accès à un nombre important de services indispensables. Le réseau Télétel a été fermé en 2012, rendant quasiment inutilisables les Minitels. On peut donc en trouver pour quelques euros dans les brocantes.&lt;&#x2F;p&gt;
+&lt;p&gt;L&#x27;objectif de ce projet est de remettre au goût du jour le Minitel en utilisant l&#x27;écran cathodique de celui-ci avec la sortie composite d&#x27;une Raspberry Pi. Un serveur d&#x27;affichage est également intégré, qui permet la création et la modification de fenêtres à distance.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;premiers-pas-avec-le-minitel&quot;&gt;Premiers pas avec le Minitel&lt;&#x2F;h1&gt;
+&lt;p&gt;Le Minitel est composé de deux cartes:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;La carte vidéo, qui se charge également de l&#x27;alimentation&lt;&#x2F;li&gt;
+&lt;li&gt;La carte mère, qui communique avec le réseau Télétel et envoie le signal vidéo à l&#x27;autre carte&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;figure&gt;
+&lt;img class=&quot;no-hover&quot;src=&quot;minitel2.jpeg&quot;&#x2F;&gt;
+&lt;figcaption&gt;Minitel avec le capot ouvert, on distingue les deux cartes.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Seule la carte vidéo sera utile ici. La carte mère sera donc enlevée et remplacée par une Raspberry Pi Zero et une carte convertissant le signal composite en un signal spécifique à l&#x27;écran cathodique. Pour l&#x27;affichage, deux signaux sont envoyés à la carte vidéo: un signal de synchronisation et un signal de donnée.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;structure-du-projet&quot;&gt;Structure du projet&lt;&#x2F;h1&gt;
+&lt;p&gt;Le projet se divise en deux parties. Dans un premier temps, il est nécessaire de caractériser le signal vidéo à envoyer au Minitel. Le signal composite sortant de la Raspberry est décomposé et modifié, d&#x27;où la nécessité d&#x27;une carte de conversion vidéo. Dans un second temps, il faut développer une application capable de gérer l&#x27;affichage, et ce avec les capacités limitées du Raspberry Pi Zero. Toute la partie logiciel de ce projet est abordée dans un autre post.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;carte-video&quot;&gt;Carte vidéo&lt;&#x2F;h1&gt;
+&lt;p&gt;Le Minitel prend en entrée un signal similaire au format PAL (25 images par seconde et progressif), ainsi qu&#x27;un signal de synchronisation. L&#x27;image progressive implique l&#x27;utilisation d&#x27;un Raspberry Pi Zero 1 avec l&#x27;OS legacy, malheureusement les cartes plus récentes ne prennent en charge que le PAL entrelaçé, qui est un format beaucoup plus répandu.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;signal-video&quot;&gt;Signal vidéo&lt;&#x2F;h2&gt;
+&lt;p&gt;Par rapport au signal PAL, le signal vidéo attendu par le minitel est inversé (blanc -&amp;gt; noir et noir -&amp;gt; blanc). De plus, le minitel attend un signal entre 0 V et 5 V, on applique un gain d&#x27;environ 3. Pour inverser et amplifier ce signal, on choisit un montage de NPN en émetteur commun, suivi d&#x27;un collecteur commun pour diminuer l&#x27;impédance et augmenter le courant de sortie.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+&lt;img class=&quot;no-hover&quot;src=&quot;video_schema.png&quot;&#x2F;&gt;
+&lt;figcaption&gt;Schéma de l&#x27;étage d&#x27;amplification du signal vidéo.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h2 id=&quot;signal-de-synchronisation&quot;&gt;Signal de synchronisation&lt;&#x2F;h2&gt;
+&lt;p&gt;Récupérer la synchronisation d&#x27;un signal vidéo est un montage assez courant. Pour ce faire, on utilise un circuit intégré, le LM1881. Il est capable de sortir d&#x27;autres signaux, notamment sur la parité du signal (utile pour les signaux entrelaçés). Les signaux logiques sont sur 5V, soit ce qu&#x27;il faut pour le Minitel.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+&lt;img class=&quot;no-hover&quot;src=&quot;sync_schema.png&quot;&#x2F;&gt;
+&lt;figcaption&gt;Schéma de l&#x27;extraction de la synchronisation du signal vidéo.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h2 id=&quot;controle-de-l-alimentation-du-minitel&quot;&gt;Contrôle de l&#x27;alimentation du Minitel&lt;&#x2F;h2&gt;
+&lt;p&gt;Pour pouvoir contrôler directement l&#x27;allumage du minitel, on utilise un relais piloté par une GPIO de la Raspberry.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+&lt;img class=&quot;no-hover&quot;src=&quot;relais_schema.png&quot;&#x2F;&gt;
+&lt;figcaption&gt;Schéma du relais contrôlé par la Raspberry.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</content>
+        
+    </entry>
+</feed>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Maxime Letemple - analogue electronics</title>
+    <link rel="self" type="application/atom+xml" href="https://mletemple.fr/en/tags/analogue-electronics/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://mletemple.fr"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-03-19T00:00:00+00:00</updated>
+    <id>https://mletemple.fr/en/tags/analogue-electronics/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Phase-locked Loops</title>
+        <published>2023-03-19T00:00:00+00:00</published>
+        <updated>2023-03-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/en/blog/pll/"/>
+        <id>https://mletemple.fr/en/blog/pll/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/en/blog/pll/">&lt;p&gt;A PLL is an electronic circuit that can be used to generate an output signal that is synchronized in frequency and phase with an input signal.
+The main function of a PLL is to track and synchronize the frequency and phase of a reference signal with an output signal.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+&lt;img class=&quot;transparent no-hover&quot;alt=&quot;Analog phase locked loop&quot;src=&quot;pll.svg&quot;&#x2F;&gt;
+&lt;figcaption&gt;Analog phase locked loop&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h1 id=&quot;phase-detector&quot;&gt;Phase Detector&lt;&#x2F;h1&gt;
+&lt;p&gt;The phase detector receives in input two signals $v1(t)$ and $v2(t)$ and returns a signal $v(t)=K_d.f(\Phi_{ref}-\Phi_{osc})$.&lt;&#x2F;p&gt;
+&lt;p&gt;Usual phase detectors are the Balanced Mixer(for sinusoid signals) or XOR comparator(for digital signals).&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;low-pass-filter&quot;&gt;Low-pass filter&lt;&#x2F;h1&gt;
+&lt;p&gt;The main objective of the low-pass filter is to generate the voltage used for the VCO.
+Usually, the transfer function is $F(p)=\frac{1}{1+\tau P}$ with $\tau = RC$ for a RC filter.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;vco&quot;&gt;VCO&lt;&#x2F;h1&gt;
+&lt;p&gt;The VCO aims to generate the output signal. The output signal is linear around its working pulsation.
+Indeed, $\omega_{VCO} = \omega_{1} + K_0(U_{VCO} - U_1)$, with $K_0$ the gain of the VCO.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;extension-for-frequency-synthesizers&quot;&gt;Extension for frequency synthesizers&lt;&#x2F;h1&gt;
+&lt;p&gt;In order to synthesize higher frequencies, a frequency divider can be added on the feedback branch. By this way,
+$f_{VCO}=N.f_{ref}$. $f_{ref}$ is the reference signal, is is called step of synthesis. Indeed, for $N = N+1$.
+$f_{VCO}=N.f_{ref} + f_{ref}$&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;reminder&quot;&gt;Reminder&lt;&#x2F;h1&gt;
+&lt;p&gt;Useful functions and values:&lt;&#x2F;p&gt;
+&lt;p&gt;Transfert function of a linearized PLL without divider:&lt;&#x2F;p&gt;
+&lt;p&gt;$$H(p)=\frac{K_d K_0 F(p)}{p + K_d K_0 F(p)} = \frac{\omega _n ²}{\omega _n ² + 2\xi \omega _n p + p²}$$&lt;&#x2F;p&gt;
+&lt;p&gt;$$\omega _n = \sqrt{\frac{K_0 K_d}{\tau}} \ \xi = \frac{1}{2} \frac{\omega _n}{K_0 K_d}$$&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
+    <title>Maxime Letemple - électronique analogique</title>
+    <link rel="self" type="application/atom+xml" href="https://mletemple.fr/tags/electronique-analogique/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://mletemple.fr"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-05-02T00:00:00+00:00</updated>
+    <id>https://mletemple.fr/tags/electronique-analogique/atom.xml</id>
+    <entry xml:lang="fr">
+        <title>Minitel</title>
+        <published>2026-05-02T00:00:00+00:00</published>
+        <updated>2026-05-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/blog/minitel/"/>
+        <id>https://mletemple.fr/blog/minitel/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/blog/minitel/">&lt;h1 id=&quot;presentation&quot;&gt;Présentation&lt;&#x2F;h1&gt;
+&lt;p&gt;Le Minitel est un terminal informatique développé en France dans les années 1980, permettant l&#x27;accès à divers services en ligne avant l&#x27;avènement d&#x27;Internet. Il est devenu un objet mythique de son époque, s&#x27;invitant dans beaucoup de foyers français et leur donnant accès à un nombre important de services indispensables. Le réseau Télétel a été fermé en 2012, rendant quasiment inutilisables les Minitels. On peut donc en trouver pour quelques euros dans les brocantes.&lt;&#x2F;p&gt;
+&lt;p&gt;L&#x27;objectif de ce projet est de remettre au goût du jour le Minitel en utilisant l&#x27;écran cathodique de celui-ci avec la sortie composite d&#x27;une Raspberry Pi. Un serveur d&#x27;affichage est également intégré, qui permet la création et la modification de fenêtres à distance.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;premiers-pas-avec-le-minitel&quot;&gt;Premiers pas avec le Minitel&lt;&#x2F;h1&gt;
+&lt;p&gt;Le Minitel est composé de deux cartes:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;La carte vidéo, qui se charge également de l&#x27;alimentation&lt;&#x2F;li&gt;
+&lt;li&gt;La carte mère, qui communique avec le réseau Télétel et envoie le signal vidéo à l&#x27;autre carte&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;figure&gt;
+&lt;img class=&quot;no-hover&quot;src=&quot;minitel2.jpeg&quot;&#x2F;&gt;
+&lt;figcaption&gt;Minitel avec le capot ouvert, on distingue les deux cartes.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Seule la carte vidéo sera utile ici. La carte mère sera donc enlevée et remplacée par une Raspberry Pi Zero et une carte convertissant le signal composite en un signal spécifique à l&#x27;écran cathodique. Pour l&#x27;affichage, deux signaux sont envoyés à la carte vidéo: un signal de synchronisation et un signal de donnée.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;structure-du-projet&quot;&gt;Structure du projet&lt;&#x2F;h1&gt;
+&lt;p&gt;Le projet se divise en deux parties. Dans un premier temps, il est nécessaire de caractériser le signal vidéo à envoyer au Minitel. Le signal composite sortant de la Raspberry est décomposé et modifié, d&#x27;où la nécessité d&#x27;une carte de conversion vidéo. Dans un second temps, il faut développer une application capable de gérer l&#x27;affichage, et ce avec les capacités limitées du Raspberry Pi Zero. Toute la partie logiciel de ce projet est abordée dans un autre post.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;carte-video&quot;&gt;Carte vidéo&lt;&#x2F;h1&gt;
+&lt;p&gt;Le Minitel prend en entrée un signal similaire au format PAL (25 images par seconde et progressif), ainsi qu&#x27;un signal de synchronisation. L&#x27;image progressive implique l&#x27;utilisation d&#x27;un Raspberry Pi Zero 1 avec l&#x27;OS legacy, malheureusement les cartes plus récentes ne prennent en charge que le PAL entrelaçé, qui est un format beaucoup plus répandu.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;signal-video&quot;&gt;Signal vidéo&lt;&#x2F;h2&gt;
+&lt;p&gt;Par rapport au signal PAL, le signal vidéo attendu par le minitel est inversé (blanc -&amp;gt; noir et noir -&amp;gt; blanc). De plus, le minitel attend un signal entre 0 V et 5 V, on applique un gain d&#x27;environ 3. Pour inverser et amplifier ce signal, on choisit un montage de NPN en émetteur commun, suivi d&#x27;un collecteur commun pour diminuer l&#x27;impédance et augmenter le courant de sortie.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+&lt;img class=&quot;no-hover&quot;src=&quot;video_schema.png&quot;&#x2F;&gt;
+&lt;figcaption&gt;Schéma de l&#x27;étage d&#x27;amplification du signal vidéo.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h2 id=&quot;signal-de-synchronisation&quot;&gt;Signal de synchronisation&lt;&#x2F;h2&gt;
+&lt;p&gt;Récupérer la synchronisation d&#x27;un signal vidéo est un montage assez courant. Pour ce faire, on utilise un circuit intégré, le LM1881. Il est capable de sortir d&#x27;autres signaux, notamment sur la parité du signal (utile pour les signaux entrelaçés). Les signaux logiques sont sur 5V, soit ce qu&#x27;il faut pour le Minitel.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+&lt;img class=&quot;no-hover&quot;src=&quot;sync_schema.png&quot;&#x2F;&gt;
+&lt;figcaption&gt;Schéma de l&#x27;extraction de la synchronisation du signal vidéo.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h2 id=&quot;controle-de-l-alimentation-du-minitel&quot;&gt;Contrôle de l&#x27;alimentation du Minitel&lt;&#x2F;h2&gt;
+&lt;p&gt;Pour pouvoir contrôler directement l&#x27;allumage du minitel, on utilise un relais piloté par une GPIO de la Raspberry.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+&lt;img class=&quot;no-hover&quot;src=&quot;relais_schema.png&quot;&#x2F;&gt;
+&lt;figcaption&gt;Schéma du relais contrôlé par la Raspberry.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="fr">
+        <title>Boucles à verrouillage de phase</title>
+        <published>2023-03-19T00:00:00+00:00</published>
+        <updated>2023-03-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Maxime Letemple
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mletemple.fr/blog/pll/"/>
+        <id>https://mletemple.fr/blog/pll/</id>
+        
+        <content type="html" xml:base="https://mletemple.fr/blog/pll/">&lt;p&gt;Une boucle à verrouillage de phase (PLL) est un circuit électronique qui peut être utilisé pour générer un signal de sortie synchronisé en fréquence et en phase avec un signal d&#x27;entrée.
+La fonction principale d&#x27;une PLL est de suivre et de synchroniser la fréquence et la phase d&#x27;un signal de référence avec un signal de sortie.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+&lt;img class=&quot;transparent no-hover&quot;alt=&quot;Boucle à verrouillage de phase analogique&quot;src=&quot;pll.svg&quot;&#x2F;&gt;
+&lt;figcaption&gt;Boucle à verrouillage de phase analogique&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h1 id=&quot;detecteur-de-phase&quot;&gt;Détecteur de phase&lt;&#x2F;h1&gt;
+&lt;p&gt;Le détecteur de phase reçoit en entrée deux signaux $v1(t)$ et $v2(t)$ et renvoie un signal $v(t)=K_d.f(\Phi_{ref}-\Phi_{osc})$.&lt;&#x2F;p&gt;
+&lt;p&gt;Les détecteurs de phase usuels sont le mélangeur équilibré (pour les signaux sinusoïdaux) ou le comparateur XOR (pour les signaux numériques).&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;filtre-passe-bas&quot;&gt;Filtre passe-bas&lt;&#x2F;h1&gt;
+&lt;p&gt;L&#x27;objectif principal du filtre passe-bas est de générer la tension utilisée pour le VCO.
+Habituellement, la fonction de transfert est $F(p)=\frac{1}{1+\tau P}$ avec $\tau = RC$ pour un filtre RC.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;vco&quot;&gt;VCO&lt;&#x2F;h1&gt;
+&lt;p&gt;Le VCO vise à générer le signal de sortie. Le signal de sortie est linéaire autour de sa pulsation de travail.
+En effet, $\omega_{VCO} = \omega_{1} + K_0(U_{VCO} - U_1)$, avec $K_0$ le gain du VCO.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;extension-pour-les-synthetiseurs-de-frequence&quot;&gt;Extension pour les synthétiseurs de fréquence&lt;&#x2F;h1&gt;
+&lt;p&gt;Afin de synthétiser des fréquences plus élevées, un diviseur de fréquence peut être ajouté sur la branche de rétroaction. De cette manière,
+$f_{VCO}=N.f_{ref}$. $f_{ref}$ est le signal de référence, il est appelé pas de synthèse. En effet, pour $N = N+1$.
+$f_{VCO}=N.f_{ref} + f_{ref}$&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;rappel&quot;&gt;Rappel&lt;&#x2F;h1&gt;
+&lt;p&gt;Fonctions et valeurs utiles :&lt;&#x2F;p&gt;
+&lt;p&gt;Fonction de transfert d&#x27;une PLL linéarisée sans diviseur :&lt;&#x2F;p&gt;
+&lt;p&gt;$$H(p)=\frac{K_d K_0 F(p)}{p + K_d K_0 F(p)} = \frac{\omega _n ²}{\omega _n ² + 2\xi \omega _n p + p²}$$&lt;&#x2F;p&gt;
+&lt;p&gt;$$\omega _n = \sqrt{\frac{K_0 K_d}{\tau}} \ \xi = \frac{1}{2} \frac{\omega _n}{K_0 K_d}$$&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
