@@ -10,8 +10,6 @@ minify_html = true
 default_language = "fr"
 taxonomies = [{ name = "tags", feed = true }]
 
-[markdown]
-highlight_code = true
 
 [search]
 index_format = "elasticlunr_json"
