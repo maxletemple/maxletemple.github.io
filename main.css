@@ -1,0 +1,50 @@
+:root{
+    --backgound-color: #010736;
+    --div-color: #0D1C42;
+    --text-color: #FCF1D0;
+}
+
+html{
+    background: url(images/background.jpg);
+}
+
+nav{
+    padding: 7px 10px;
+}
+
+body{
+    color: var(--text-color);
+    display: grid;
+    align-items: center;
+    gap: 40px;
+    width: min(1360px, calc(100% - 24px));
+}
+
+header{
+    background-color: var(--div-color);
+    height: 50px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: 15px;
+}
+
+aside{
+    background-color: var(--div-color);
+    gap: 5px;
+    margin: 5px;
+    padding: 4px 5px;
+}
+
+.main-column{
+    background-color: var(--div-color);
+    gap: 5px;
+    margin: 5px;
+    padding: 10px 10px;
+}
+
+.box-title{
+    padding: 4px 5px;
+}
