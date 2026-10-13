@@ -1,11 +1,16 @@
 :root{
-    --backgound-color: #010736;
-    --div-color: #0D1C42;
-    --text-color: #FCF1D0;
+    --backgound-color: #020204;
+    --text-color: #C3DAD7;
+    --color-2nd: #7b2f06;
+    --color-3rd: #B77358;
+    --color-4th: #3FA4AE;
 }
 
 html{
-    background: url(images/background.jpg);
+    background: center url(images/background.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
 }
 
 nav{
@@ -14,32 +19,37 @@ nav{
 
 body{
     color: var(--text-color);
+    width: 50vw;
+    margin: 0 auto;
     display: grid;
-    align-items: center;
     gap: 40px;
     width: min(1360px, calc(100% - 24px));
 }
 
 header{
-    background-color: var(--div-color);
     height: 50px;
+}
+
+nav{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 main{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    align-items: 15px;
 }
 
 aside{
-    background-color: var(--div-color);
-    gap: 5px;
+    display: grid;
+    gap: 20px;
     margin: 5px;
     padding: 4px 5px;
+    width: 60px;
 }
 
 .main-column{
-    background-color: var(--div-color);
     gap: 5px;
     margin: 5px;
     padding: 10px 10px;
@@ -47,4 +57,16 @@ aside{
 
 .box-title{
     padding: 4px 5px;
+}
+
+.box{
+    border: 5px ridge var(--color-4th);
+    background-color: var(--color-2nd);
+}
+
+.ps_logo{
+    position: fixed;
+    width: auto;
+    height: 100vh;
+    left: 0px;
 }
