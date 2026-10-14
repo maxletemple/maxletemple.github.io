@@ -1,7 +1,7 @@
 :root{
     --backgound-color: #020204;
-    --text-color: #C3DAD7;
-    --color-2nd: #7b2f06;
+    --text-color: #e9f1f0;
+    --color-2nd: #133e50;
     --color-3rd: #B77358;
     --color-4th: #3FA4AE;
 }
@@ -11,10 +11,62 @@ html{
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-nav{
+a,
+button,
+[role="button"],
+label,
+select,
+summary,
+input[type="submit"],
+input[type="button"],
+input[type="checkbox"],
+input[type="radio"],
+.cursor-pointer {
+  cursor: url("/cursor/hoover.ico") 32 32, pointer;
+}
+
+#animate_cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 64px;
+    margin: -32px 0 0 -32px;
+    background: url("/cursor/oiia2.gif") no-repeat center / contain;
+    pointer-events: none;
+    z-index: 2147483647;
+    display: none;
+}
+
+html.cursor-moving #animate_cursor {
+  display: block;
+}
+
+html.cursor-moving,
+html.cursor-moving * {
+  cursor: none !important;
+}
+
+nav ul{
     padding: 7px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    justify-content: center;
+}
+
+nav ul li{
+    width: 10vw;
+    text-decoration: none;
+}
+
+nav ul li a:visited{
+    text-decoration: none;
+    color: inherit;
 }
 
 body{
@@ -30,23 +82,18 @@ header{
     height: 50px;
 }
 
-nav{
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-}
-
 main{
     display: grid;
+    height:100%;
     grid-template-columns: 1fr 2fr 1fr;
 }
 
 aside{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     gap: 20px;
     margin: 5px;
-    padding: 4px 5px;
-    width: 60px;
 }
 
 .main-column{
@@ -69,4 +116,25 @@ aside{
     width: auto;
     height: 100vh;
     left: 0px;
+}
+
+.img_fill{
+    width: 100%;
+    display: block;
+}
+
+.epsi{
+    height: fit-content;
+}
+
+.webrings{
+    height: 30vh;
+}
+
+.img_88x31{
+    height: 20vh;
+}
+
+.update_log{
+    height: 100%;
 }
