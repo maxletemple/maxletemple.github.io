@@ -4,6 +4,7 @@
     --color-2nd: #133e50;
     --color-3rd: #B77358;
     --color-4th: #3FA4AE;
+    --color-5th: #83abb0;
 }
 
 html{
@@ -39,14 +40,12 @@ nav ul li a:visited{
 }
 
 
-
 body{
     color: var(--text-color);
-    width: 50vw;
+    width: 60vw;
     margin: 0 auto;
     display: grid;
     gap: 40px;
-    width: min(1360px, calc(100% - 24px));
 }
 
 header{
@@ -85,6 +84,9 @@ aside{
     border-radius: 1em 1em 0% 0%;
     padding: 4px 5px;
     background-color: var(--color-2nd);
+    animation-name: blink-border-color;
+    animation-duration: 200ms;
+    animation-iteration-count: infinite;    
 }
 
 .box-body{
@@ -93,6 +95,9 @@ aside{
     background-color: var(--color-2nd);
     border-style: none ridge ridge;
     flex-grow: 1;
+    animation-name: blink-border-color;
+    animation-duration: 200ms;
+    animation-iteration-count: infinite;
 }
 
 
@@ -127,4 +132,16 @@ aside{
 
 .update_log{
     height: 100%;
+}
+
+@keyframes blink-border-color{
+    0% {
+        border-color: var(--color-4th);
+    }
+    50% {
+        border-color: var(--color-5th);
+    }
+    100% {
+        border-color: var(--color-4th);
+    }    
 }
