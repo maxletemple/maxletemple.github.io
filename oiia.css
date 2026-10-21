@@ -1,0 +1,35 @@
+a,
+button,
+[role="button"],
+label,
+select,
+summary,
+input[type="submit"],
+input[type="button"],
+input[type="checkbox"],
+input[type="radio"],
+.cursor-pointer {
+  cursor: url("/cursor/hoover.png") 0 0, pointer;
+}
+
+#animate_cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 64px;
+    /* margin: -32px 0 0 -32px; */
+    background: url("/cursor/oiia.gif") no-repeat center / contain;
+    pointer-events: none;
+    z-index: 2147483647;
+    display: none;
+}
+
+html.cursor-moving #animate_cursor {
+  display: block;
+}
+
+html.cursor-moving,
+html.cursor-moving * {
+  cursor: none !important;
+}

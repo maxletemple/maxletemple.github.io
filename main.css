@@ -14,40 +14,9 @@ html{
     font-family: 'Courier New', Courier, monospace;
 }
 
-a,
-button,
-[role="button"],
-label,
-select,
-summary,
-input[type="submit"],
-input[type="button"],
-input[type="checkbox"],
-input[type="radio"],
-.cursor-pointer {
-  cursor: url("/cursor/hoover.ico") 32 32, pointer;
-}
-
-#animate_cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 64px;
-    height: 64px;
-    margin: -32px 0 0 -32px;
-    background: url("/cursor/oiia2.gif") no-repeat center / contain;
-    pointer-events: none;
-    z-index: 2147483647;
-    display: none;
-}
-
-html.cursor-moving #animate_cursor {
-  display: block;
-}
-
-html.cursor-moving,
-html.cursor-moving * {
-  cursor: none !important;
+nav{
+    background-color: var(--color-2nd);
+    margin-top: 30px;
 }
 
 nav ul{
@@ -68,6 +37,8 @@ nav ul li a:visited{
     text-decoration: none;
     color: inherit;
 }
+
+
 
 body{
     color: var(--text-color);
@@ -102,11 +73,30 @@ aside{
     padding: 10px 10px;
 }
 
-.box-title{
-    padding: 4px 5px;
+.box{
+    display: flex;
+    flex-direction: column;
 }
 
-.box{
+.box-title{
+    border: 5px var(--color-4th);
+    border-style: ridge ridge dotted;
+    border-bottom-width: 2px;
+    border-radius: 1em 1em 0% 0%;
+    padding: 4px 5px;
+    background-color: var(--color-2nd);
+}
+
+.box-body{
+    border: 5px var(--color-4th);
+    padding: 4px 5px;
+    background-color: var(--color-2nd);
+    border-style: none ridge ridge;
+    flex-grow: 1;
+}
+
+
+.box-standalone{
     border: 5px ridge var(--color-4th);
     background-color: var(--color-2nd);
 }
