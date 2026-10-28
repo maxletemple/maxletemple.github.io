@@ -15,9 +15,40 @@ html{
     font-family: 'Courier New', Courier, monospace;
 }
 
+.crtwrap::after {
+    background: rgba(18,16,16,.1);
+    opacity: 0;
+    animation: flickering .15s infinite !important;
+}
+
+.crtwrap::after, .crtwrap::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-height: 250%;
+    position: fixed;
+    z-index: 2000;
+    pointer-events: none;
+    overflow: hidden;
+}
+.crtwrap::before {
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.125) 50%),linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    background-size: auto, auto;
+    background-size: 100% 4px,4px 100%;
+}
+
 nav{
-    background-color: var(--color-2nd);
+    background-color: var(--color-4th);
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 5px ridge var(--color-2nd);
+    border-radius: 50px;
 }
 
 nav ul{
@@ -27,18 +58,31 @@ nav ul{
     align-items: center;
     list-style-type: none;
     justify-content: center;
+    height: 100%;
+    gap: 10px;
 }
 
-nav ul li{
+nav ul a{
     width: 10vw;
     text-decoration: none;
+    height: 100%;
+    background-color: var(--color-2nd);
+    border-style: ridge;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
 }
 
-nav ul li a:visited{
+nav ul a:hover{
+    background-color: var(--color-4th);
+}
+
+a:visited{
     text-decoration: none;
     color: inherit;
 }
-
 
 body{
     color: var(--text-color);
@@ -67,9 +111,10 @@ aside{
 }
 
 .main-column{
-    gap: 5px;
     margin: 5px;
     padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .box{
@@ -111,6 +156,7 @@ aside{
     width: auto;
     height: 100vh;
     left: 0px;
+    z-index: 9999;
 }
 
 .img_fill{
