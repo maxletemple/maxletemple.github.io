@@ -84,6 +84,10 @@ a:visited{
     color: inherit;
 }
 
+a{
+    color: inherit;
+}
+
 body{
     color: var(--text-color);
     width: 60vw;
