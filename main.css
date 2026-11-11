@@ -10,6 +10,7 @@
 html{
     background: center url(images/background.jpg);
     background-size: cover;
+    background-color: #020204;
     height: 100vh;
     width: 100vw;
     font-family: 'Courier New', Courier, monospace;
