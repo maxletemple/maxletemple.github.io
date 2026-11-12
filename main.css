@@ -11,6 +11,7 @@ html{
     background: center url(images/background.jpg);
     background-size: cover;
     background-color: #020204;
+    background-attachment: fixed;
     height: 100vh;
     width: 100vw;
     font-family: 'Courier New', Courier, monospace;
@@ -110,7 +111,7 @@ main{
 aside{
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 80vh;
     gap: 20px;
     margin: 5px;
 }
@@ -182,7 +183,38 @@ aside{
 }
 
 .update_log{
-    height: 100%;
+    flex: auto;
+}
+
+.project{
+    border: 2px var(--color-4th);
+    border-style: dotted;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    text-decoration: none;
+}
+
+.project:hover{
+    background-color: var(--color-4th);
+}
+
+.project h4{
+    margin-top: 0;
+    margin-bottom: 2px;
+    grid-column: 1;
+}
+
+.project div{
+    grid-column: 1;
+}
+
+.project img{
+    grid-column: 2;
+    grid-row: 1 / 3;
 }
 
 @keyframes blink-border-color{
