@@ -8,7 +8,7 @@
 }
 
 html{
-    background: center url(images/background.jpg);
+    background: center url(/images/background.jpg);
     background-size: cover;
     background-color: #020204;
     background-attachment: fixed;
